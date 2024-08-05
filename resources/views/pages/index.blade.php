@@ -85,7 +85,7 @@
     </nav>
 
     <div class="hero overlay">
-        <img src="home/images/blob.svg" alt="" class="img-fluid blob">
+        <img src="logo1.png" alt="" class="img-fluid blob">
         <div class="container">
             <div class="row align-items-center justify-content-between pt-5">
                 <div class="col-lg-6 text-center text-lg-start pe-lg-5">
@@ -97,9 +97,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="img-wrap">
+                    {{-- <div class="img-wrap">
                         <img src="home/images/img-1.jpg" alt="Image" class="img-fluid rounded">
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -118,75 +118,11 @@
                         kegiatan yang rutin diselenggarakan setiap tahunnya oleh Himpunan Mahasiswa Teknik
                         Informatika (HIMTI) Universitas Airlangga yang bertujuan untuk memberikan bekal awal kepada
                         Mahasiswa Baru D4 Teknik Informatika baik dalam hal akademik dan non-akademik.</p>
-
-                    <div id="post-slider-nav" data-aos="fade-up" data-aos-delay="200">
-                        <button class="btn btn-primary py-2" class="prev" data-controls="prev">Prev</button>
-                        <button class="btn btn-primary py-2" class="next" data-controls="next">Next</button>
-                    </div>
-
                 </div>
             </div>
         </div>
 
-        <div class="post-slider-wrap" data-aos="fade-up" data-aos-delay="300">
 
-            <div id="post-slider" class="post-slider">
-                <div class="item">
-                    <a href="case-study.html" class="card d-block">
-                        <img src="home/images/img-1.jpg" class="card-img-top" alt="Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Behind the word mountains</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a href="case-study.html" class="card">
-                        <img src="home/images/img-2.jpg" class="card-img-top" alt="Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Behind the word mountains</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a href="case-study.html" class="card">
-                        <img src="home/images/img-3.jpg" class="card-img-top" alt="Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Behind the word mountains</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a href="case-study.html" class="card">
-                        <img src="home/images/img-4.jpg" class="card-img-top" alt="Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Behind the word mountains</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a href="case-study.html" class="card">
-                        <img src="home/images/img-1.jpg" class="card-img-top" alt="Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Behind the word mountains</h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
 
 
     </div>
@@ -195,7 +131,7 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-lg-6 text-center">
-                    <h2 class="heading text-primary">Testimonials</h2>
+                    <h2 class="heading text-primary">Pengumuman</h2>
                 </div>
 
             </div>
@@ -264,68 +200,10 @@
         </div>
     </div>
 
-
-
-    <div class="section sec-news">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-7">
-                    <h2 class="heading text-primary">Tugas Terbaru</h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card post-entry">
-                        <a href="single.html"><img src="home/images/img-1.jpg" class="card-img-top"
-                                alt="Image"></a>
-                        <div class="card-body">
-                            <div><span class="text-uppercase font-weight-bold date">Jan 20, 2021</span></div>
-                            <h5 class="card-title"><a href="single.html">Behind the word mountains</a></h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                            <p class="mt-5 mb-0"><a href="#">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card post-entry">
-                        <a href="single.html"><img src="home/images/img-2.jpg" class="card-img-top"
-                                alt="Image"></a>
-                        <div class="card-body">
-                            <div><span class="text-uppercase font-weight-bold date">Jan 20, 2021</span></div>
-                            <h5 class="card-title"><a href="single.html">Behind the word mountains</a></h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                            <p class="mt-5 mb-0"><a href="#">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card post-entry">
-                        <a href="single.html"><img src="home/images/img-3.jpg" class="card-img-top"
-                                alt="Image"></a>
-                        <div class="card-body">
-                            <div><span class="text-uppercase font-weight-bold date">Jan 20, 2021</span></div>
-                            <h5 class="card-title"><a href="single.html">Behind the word mountains</a></h5>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. </p>
-                            <p class="mt-5 mb-0"><a href="single.html">Read more</a></p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
     <div class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
                     <div class="widget">
                         <h3>About</h3>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
@@ -339,8 +217,8 @@
                             <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
                         </ul>
                     </div> <!-- /.widget -->
-                </div> <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                </div> <!-- /.col-lg-4 --> --}}
+                <div class="col-lg-6">
                     <div class="widget">
                         <h3>Company</h3>
                         <ul class="list-unstyled float-start links">
@@ -361,7 +239,7 @@
                         </ul>
                     </div> <!-- /.widget -->
                 </div> <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="widget">
                         <h3>Navigation</h3>
                         <ul class="list-unstyled links mb-4">
