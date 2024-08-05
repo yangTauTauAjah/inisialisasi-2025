@@ -1,20 +1,18 @@
 <?php
 
-use App\Livewire\CreatePost;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FileUploadController;
 
 Route::get('/', function () {
-    return view('Guest.index');
-});
-Route::get('/dashboard', function () {
-    return view('Admin.dashboard');
-});
-Route::get('/admin-penugasan', function () {
-    return view('Admin.penugasan');
-});
-Route::get('/create-post', function () {
-    return view('Admin.contentList');
+    return view('pages.index');
 });
 
+Route::get('/penugasan', function () {
+    return view('pages.penugasan.penugasan');
+});
 
-// Route::get('/create-post', CreatePost::class);
+Route::get('/penugasan/d1t1', function () {
+    return view('pages.penugasan.day1.tugas1');
+});
+
+Route::post('/upload', [FileUploadController::class, 'store'])->name('file.upload');
