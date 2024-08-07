@@ -60,7 +60,8 @@
                         <div class="col-log-7 col-4 text-end ">
                             <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
                                 <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="/penugasan">Penugasan</a></li>
+                                <li><a href="/penugasan">Penugasan Alim</a></li>
+                                <li><a href="/task">Penugasan Alif</a></li>
                             </ul>
                             <a href="#"
                                 class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
@@ -85,28 +86,77 @@
     </nav>
 
     <div class="hero overlay">
-        <img src="logo1.png" alt="" class="img-fluid blob">
+        {{-- <img src="logo1.png" alt="" class="img-fluid blob"> --}}
         <div class="container">
             <div class="row align-items-center justify-content-between pt-5">
                 <div class="col-lg-6 text-center text-lg-start pe-lg-5">
                     <h1 class="heading text-white mb-3" data-aos="fade-up">INISIALISASI 2024</h1>
                     <p class="text-white mb-5" data-aos="fade-up" data-aos-delay="100">Situs resmi kegiatan INISIALISASI
                         Mahasiswa Baru D4 Teknik Informatika Angkatan 2024.</p>
-                    <div class="align-items-center mb-5 mm text-center text-lg-start" data-aos="fade-up" data-aos-delay="200">
+                    <div class="align-items-center mb-5 mm text-center text-lg-start" data-aos="fade-up"
+                        data-aos-delay="200">
                         <a href="#about" class="btn btn-outline-white-reverse me-4">Apa itu INISIALISASI ?</a>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                    {{-- <div class="img-wrap">
-                        <img src="home/images/img-1.jpg" alt="Image" class="img-fluid rounded">
-                    </div> --}}
+                <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="img-wrap">
+                        <img src="logo1.png" alt="" class="img-fluid w-75 rounded shadow-none">
+                        {{-- <img src="home/images/img-1.jpg" alt="Image" class="img-fluid rounded"> --}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <h1 class="heading my-5 text-center" data-aos="fade-up">APA ITU INISIALISASI ?</h1>
+            </div>
+            <div class="row justify-content-center align-items-start">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="{{ asset('inis\fotbar.jpg')}}" class="d-block w-100" alt="foto-inis">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{{ asset('inis/iloveimg-compressed/IMG_7779.jpg')}}" class="d-block w-100" alt="foto-inis">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{{ asset('inis/iloveimg-compressed/IMG_8923.jpg')}}" class="d-block w-100" alt="foto-inis">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="col-lg-4 ps-lg-2">
+                    <div class="mb-5">
+                        <h2 class="text-black h4"><strong>INISIALISASI</strong></h2>
+                        <p>merupakan serangkaian
+                            kegiatan yang rutin diselenggarakan setiap tahunnya oleh Himpunan Mahasiswa Teknik
+                            Informatika (HIMTI) Universitas Airlangga yang bertujuan untuk memberikan bekal awal kepada
+                            Mahasiswa Baru D4 Teknik Informatika baik dalam hal akademik dan non-akademik.</p>
+                    </div>
+                </div>
 
-    <div class="section sec-portfolio bg-light pb-5	" id="about">
+            </div>
+        </div>
+    </div>
+
+    {{-- <div class="section sec-portfolio bg-light pb-5	" id="about">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-5 mx-auto text-center ">
@@ -121,11 +171,8 @@
                 </div>
             </div>
         </div>
+    </div> --}}
 
-
-
-
-    </div>
 
     <div class="section sec-testimonial bg-light">
         <div class="container">
