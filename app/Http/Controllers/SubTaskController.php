@@ -17,7 +17,6 @@ class SubTaskController extends Controller
     public function index()
     {
         $taskGroups = TaskGroup::with('subTasks')->get();
-        // $images = $filePaths = FileManager::pluck('file_path');
         return view('admin.tugas', compact('taskGroups'));
     }
 

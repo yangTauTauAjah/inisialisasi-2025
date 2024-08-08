@@ -1,5 +1,6 @@
 @extends('layout.main')
 @section('content')
+    
     <div class="row">
         <div class="col">
             <div class="card">
@@ -13,16 +14,16 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#panelsStayOpen-{{ $loop->iteration }}" aria-expanded="true"
+                                        data-bs-target="#panelsStayOpen-{{ $loop->iteration }}" aria-expanded="false"
                                         aria-controls="panelsStayOpen-{{ $loop->iteration }}">
                                         {{ $taskGroup->task_group_name }}
                                     </button>
                                 </h2>
-                                <div id="panelsStayOpen-{{ $loop->iteration }}" class="accordion-collapse collapse show">
+                                <div id="panelsStayOpen-{{ $loop->iteration }}" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <ol>
                                             @if ($taskGroup->subTasks->isEmpty())
-                                                <p class="">Belum Ada Tugas </p>
+                                                <p style="color: gray">Belum Ada Tugas</p>
                                             @endif
                                             @foreach ($taskGroup->subTasks as $subTask)
                                                 <div class="d-flex justify-content-between">
@@ -43,6 +44,7 @@
                                 </div>
                             </div>
                         @endforeach
+
                     </div>
                 </div>
             </div>
@@ -72,65 +74,13 @@
         </div>
     </div>
 
+
     <div class="row">
         <div class="col">
-            <div class="card recent-sales overflow-auto">
-
+            <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Pengumpulan Tugas <span>| Terbaru</span></h5>
-
-                    <table class="table table-borderless datatable">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Customer</th>
-                                <th scope="col">Product</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"><a href="#">#2457</a></th>
-                                <td>Brandon Jacob</td>
-                                <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                                <td>$64</td>
-                                <td><span class="badge bg-success">Approved</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">#2147</a></th>
-                                <td>Bridie Kessler</td>
-                                <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a>
-                                </td>
-                                <td>$47</td>
-                                <td><span class="badge bg-warning">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">#2049</a></th>
-                                <td>Ashleigh Langosh</td>
-                                <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                                <td>$147</td>
-                                <td><span class="badge bg-success">Approved</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">#2644</a></th>
-                                <td>Angus Grady</td>
-                                <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                                <td>$67</td>
-                                <td><span class="badge bg-danger">Rejected</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#">#2644</a></th>
-                                <td>Raheem Lehner</td>
-                                <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                                <td>$165</td>
-                                <td><span class="badge bg-success">Approved</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
+                    <h5>aijwiaj </h5>
                 </div>
-
             </div>
         </div>
     </div>
@@ -142,14 +92,19 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Tugas</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Nama Tugas</label>
+                            <input type="text" class="form-control" name="task_group_name"
+                                placeholder="INISIALISASI DAY - 1">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
@@ -186,7 +141,8 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="">Batas Pengumpulan</label>
-                            <input type="date" class="form-control" name="task_due" placeholder="INISIALISASI Day 4">
+                            <input type="datetime-local" class="form-control" name="task_due"
+                                placeholder="INISIALISASI Day 4">
                         </div>
                 </div>
                 <div class="modal-footer">

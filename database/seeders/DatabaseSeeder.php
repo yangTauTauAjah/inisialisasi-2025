@@ -19,23 +19,23 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         
-        TaskGroup::create([
-            'task_group_name' => 'PRA INISIALISASI'
-        ]);
-        TaskGroup::create([
-            'task_group_name' => 'INISIALISASI Day 1'
-        ]);
-        TaskGroup::create([
-            'task_group_name' => 'INISIALISASI Day 2'
-        ]);
-        TaskGroup::create([
-            'task_group_name' => 'INISIALISASI Day 3'
-        ]);
-        TaskGroup::create([
-            'task_group_name' => 'INISIALISASI Day 4'
-        ]);
-        User::factory(100)->create();
-        // FileManager::factory(100)->create();
+        // TaskGroup::create([
+        //     'task_group_name' => 'PRA INISIALISASI'
+        // ]);
+        // TaskGroup::create([
+        //     'task_group_name' => 'INISIALISASI Day 1'
+        // ]);
+        // TaskGroup::create([
+        //     'task_group_name' => 'INISIALISASI Day 2'
+        // ]);
+        // TaskGroup::create([
+        //     'task_group_name' => 'INISIALISASI Day 3'
+        // ]);
+        // TaskGroup::create([
+        //     'task_group_name' => 'INISIALISASI Day 4'
+        // ]);
+        // User::factory(100)->create();
+        FileManager::factory(100)->create();
 
         // FileManager::create([
         //     'SubTask_id' => 1,

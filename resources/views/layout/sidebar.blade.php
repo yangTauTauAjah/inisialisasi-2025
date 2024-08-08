@@ -3,7 +3,7 @@
         <div class="sidebar-header position-relative">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/logo/logo.svg" alt="Logo" srcset=""></a>
+                    <a href="index.html"><img src="{{ asset('assets/images/logo/logo.svg')}}" alt="Logo" srcset=""></a>
                 </div>
                 <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -48,7 +48,7 @@
                     </a>
                 </li>
 
-                <li class="sidebar-title">Penugasan</li>
+                <li class="sidebar-title fw-bold">Penugasan</li>
 
                 <li class="sidebar-item {{ (request()->is('task')) ? 'active' : '' }}">
                     <a href="/task" class='sidebar-link'>
@@ -79,13 +79,13 @@
                 </li> --}}
 
 
-                <li class="sidebar-title">Berita & Pengumuman</li>
+                <li class="sidebar-title fw-bold">Berita & Pengumuman</li>
 
 
-                <li class="sidebar-item  ">
-                    <a href="form-layout.html" class='sidebar-link'>
+                <li class="sidebar-item {{ (request()->is('admin/berita-dan-pengumuman')) ? 'active' : '' }}">
+                    <a href="admin/berita-dan-pengumuman" class='sidebar-link'>
                         <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Dashboard Berita</span>
+                        <span>Berita & Pengumuman</span>
                     </a>
                 </li>
 
