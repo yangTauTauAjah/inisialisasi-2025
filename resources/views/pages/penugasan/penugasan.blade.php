@@ -218,7 +218,6 @@
         <div class="forum-card accordion card-body" onclick="toggleAccordion(this)">
             <div class="forum-post">
                 <div class="post-title">Inisialisasi - Day 1</div>
-                <p>Branding Prodi</p>
             </div>
             <div class="accordion-content">
                 <div class="">
@@ -241,7 +240,6 @@
         <div class="forum-card accordion card-body" onclick="toggleAccordion(this)">
             <div class="forum-post">
                 <div class="post-title">Inisialisasi - Day 2</div>
-                <p>Time Management</p>
             </div>
             <div class="accordion-content">
                 <div class="">
@@ -265,7 +263,6 @@
         <div class="forum-card accordion card-body" onclick="toggleAccordion(this)">
             <div class="forum-post">
                 <div class="post-title">Inisialisasi - Day 3</div>
-                <p>Communication</p>
             </div>
             <div class="accordion-content">
                 <div class="">
@@ -284,7 +281,6 @@
         <div class="forum-card accordion card-body" onclick="toggleAccordion(this)">
             <div class="forum-post">
                 <div class="post-title">Inisialisasi - Day 4</div>
-                <p>Leadership</p>
             </div>
             <div class="accordion-content">
                 <div class="">
@@ -307,7 +303,6 @@
         <div class="forum-card accordion card-body" onclick="toggleAccordion(this)">
             <div class="forum-post">
                 <div class="post-title">Inisialisasi - Day 5</div>
-                <p>Evaluasi</p>
             </div>
             <div class="accordion-content">
                 <div class="assignment">
