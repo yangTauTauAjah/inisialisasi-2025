@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\FileManager;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 
 class FileManagerController extends Controller
 {
@@ -13,6 +14,24 @@ class FileManagerController extends Controller
     public function index()
     {
         //
+    }
+
+    public function path($userId)
+    {
+        // Retrieve all file_path for the specified user
+        $filePaths = FileManager::where('user_id', $userId)
+            ->pluck('file_path'); // Get only the file_path column
+
+        // return $filePaths;
+        return URL::to('/tugas/' . $filePaths, [], false);
+    }
+
+    public function getAllFilePaths()
+    {
+        // Retrieve all file_path values for all users
+        $filePaths = FileManager::pluck('file_path'); // Get only the file_path column
+
+        return $filePaths;
     }
 
     /**

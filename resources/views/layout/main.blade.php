@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Mazer Admin Dashboard</title>
 
+    @livewireStyles
     @include('layout.css')
 
 </head>
@@ -42,6 +43,8 @@
             </footer>
         </div>
     </div>
+    
+    @livewireScripts
     @include('layout.script')
 
 </body>

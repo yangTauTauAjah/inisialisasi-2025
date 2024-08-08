@@ -18,8 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(100)->create();
-
+        
         TaskGroup::create([
             'task_group_name' => 'PRA INISIALISASI'
         ]);
@@ -35,13 +34,15 @@ class DatabaseSeeder extends Seeder
         TaskGroup::create([
             'task_group_name' => 'INISIALISASI Day 4'
         ]);
+        User::factory(100)->create();
+        // FileManager::factory(100)->create();
 
-        FileManager::create([
-            'SubTask_id' => 1,
-            'user_id' => 1,
-            'file_name' => 'dwddd.jpg',
-            'file_path' => 'dwddd.jpg'
-        ]);
+        // FileManager::create([
+        //     'SubTask_id' => 1,
+        //     'user_id' => 1,
+        //     'file_name' => 'dwddd.jpg',
+        //     'file_path' => 'dwddd.jpg'
+        // ]);
 
         // sub_task::create([
         //     'task_group_id' => 1,

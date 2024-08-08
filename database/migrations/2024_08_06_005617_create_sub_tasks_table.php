@@ -19,8 +19,8 @@ return new class extends Migration
                 ->onUpdate('cascade');
             $table->string('task_name');
             $table->string('task_description');
-            $table->date('task_due');
-            $table->date('task_done')->nullable();
+            $table->dateTime('task_due');
+            $table->dateTime('task_done')->nullable();
             $table->string('task_file')->nullable();
             $table->timestamps();
         });
