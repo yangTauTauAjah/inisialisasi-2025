@@ -9,11 +9,15 @@ use App\Http\Controllers\TaskGroupController;
 use App\Http\Middleware\AdminMiddleware;
 
 Route::get('/', function () {
+    return view('pages.landing');
+});
+
+Route::get('/index', function () {
     return view('pages.index');
 });
 
 Route::get('/penugasan', function () {
-    return view('pages.penugasan.penugasan');
+    return view('pages.penugasan.tugas');
 });
 
 Route::get('/task', function () {
