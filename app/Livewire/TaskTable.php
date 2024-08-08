@@ -11,6 +11,7 @@ use App\Models\User;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use Rappasoft\LaravelLivewireTables\Views\Columns\DateColumn;
+use Rappasoft\LaravelLivewireTables\Views\Columns\ImageColumn;
 use Rappasoft\LaravelLivewireTables\Views\Columns\LinkColumn;
 use Rappasoft\LaravelLivewireTables\Views\Filters\SelectFilter;
 use Rappasoft\LaravelLivewireTables\Views\Filters\TextFilter;
@@ -23,6 +24,8 @@ class TaskTable extends DataTableComponent
     {
         $this->setPrimaryKey('id');
         $this->setSearchPlaceholder('Search...');
+        $this->setPerPage(10);
+        $this->setPerPageAccepted([10, 25, 50, 100]);
     }
 
     public function filters(): array
@@ -68,10 +71,17 @@ class TaskTable extends DataTableComponent
             DateColumn::make("Dikumpulkan pada", "created_at")
                 ->outputFormat('d M Y')
                 ->sortable(),
-            // LinkColumn::make("Tugas", "file_path")
-            //     ->title(fn($row) => 'Edit')
-            //     ->location(fn($row) => asset('dwddd.jpg', $row))
-            //     ->sortable(),
+            LinkColumn::make("Tugas", "file_path")
+                ->title(fn($row) => 'Lihat')
+                ->location(
+                    fn($row) => url('#')
+                )
+                ->attributes(fn($row) => [
+                    'loading' => 'lazy',
+                    'data-bs-toggle' => "modal", 
+                    'data-bs-target' => '#exampleModal' . $row->id,
+                ])
+                ->sortable(),
         ];
     }
 }

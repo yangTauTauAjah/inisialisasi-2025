@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FileManager;
 use App\Models\sub_task;
 use App\Models\SubTask;
 use App\Models\task_group;
@@ -16,8 +17,8 @@ class SubTaskController extends Controller
     public function index()
     {
         $taskGroups = TaskGroup::with('subTasks')->get();
-        $subtask = SubTask::all();
-        return view('admin.tugas', compact('taskGroups', 'subtask'));
+        // $images = $filePaths = FileManager::pluck('file_path');
+        return view('admin.tugas', compact('taskGroups'));
     }
 
     /**
@@ -45,7 +46,8 @@ class SubTaskController extends Controller
     }
 
     public function list_tugas(){
-        return view('admin.listTugas');
+        $images = $filePaths = FileManager::pluck('file_path');
+        return view('admin.listTugas', compact('images'));
     }
 
     /**

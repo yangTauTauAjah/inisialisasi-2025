@@ -41,8 +41,6 @@
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
-                <li class="sidebar-title">Menu</li>
-
                 <li class="sidebar-item {{ (request()->is('dashboard')) ? 'active' : '' }}">
                     <a href="/dashboard" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
@@ -50,7 +48,22 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item  has-sub">
+                <li class="sidebar-title">Penugasan</li>
+
+                <li class="sidebar-item {{ (request()->is('task')) ? 'active' : '' }}">
+                    <a href="/task" class='sidebar-link'>
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Dashboard Tugas</span>
+                    </a>
+                </li>
+                <li class="sidebar-item {{ (request()->is('task-manager')) ? 'active' : '' }}">
+                    <a href="/task-manager" class='sidebar-link'>
+                        <i class="bi bi-journal-check"></i>
+                        <span>Task Manager</span>
+                    </a>
+                </li>
+
+                {{-- <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i class="bi bi-stack"></i>
                         <span>Penugasan</span>
@@ -63,20 +76,20 @@
                             <a href="/task-manager">Task Manager</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
 
-                <li class="sidebar-title">Forms &amp; Tables</li>
+                <li class="sidebar-title">Berita & Pengumuman</li>
 
 
                 <li class="sidebar-item  ">
                     <a href="form-layout.html" class='sidebar-link'>
                         <i class="bi bi-file-earmark-medical-fill"></i>
-                        <span>Form Layout</span>
+                        <span>Dashboard Berita</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item  has-sub">
+                {{-- <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i class="bi bi-journal-check"></i>
                         <span>Form Validation</span>
@@ -107,7 +120,7 @@
                             <a href="form-editor-tinymce.html">TinyMCE</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
 
 

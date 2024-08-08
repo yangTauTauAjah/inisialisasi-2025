@@ -28,11 +28,15 @@
                                                 <div class="d-flex justify-content-between">
                                                     <li class="fw-bold" style="color: black">{{ $subTask->task_name }}</li>
                                                     <div class="control">
-                                                        <a href="{{ route('task.show', $subTask->id) }}" class="text-secondary">view</a>
+                                                        <a href="{{ route('task.show', $subTask->id) }}"
+                                                            class="text-secondary">edit</a>
                                                         <a href="" class="text-secondary">delete</a>
                                                     </div>
                                                 </div>
-                                                <ol style="color: gray">{{ $subTask->task_description }}</ol>
+                                                <div class="d-flex justify-content-between">
+                                                    <ol style="color: gray">{{ $subTask->task_description }}</ol>
+                                                    <ol class="text-danger">{{ $subTask->task_due }}</ol>
+                                                </div>
                                             @endforeach
                                         </ol>
                                     </div>
