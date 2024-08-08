@@ -66,10 +66,11 @@ class TaskTable extends DataTableComponent
                 ->searchable()
                 ->sortable(),
             DateColumn::make("Batas Pengumpulan", "subTask.task_due")
-                ->outputFormat('d M Y')
+                ->inputFormat('Y-m-d H:i:s')
+                ->outputFormat('d M H:i:s')
                 ->sortable(),
             DateColumn::make("Dikumpulkan pada", "created_at")
-                ->outputFormat('d M Y')
+                ->outputFormat('d M H:i:s')
                 ->sortable(),
             LinkColumn::make("Tugas", "file_path")
                 ->title(fn($row) => 'Lihat')
@@ -78,7 +79,7 @@ class TaskTable extends DataTableComponent
                 )
                 ->attributes(fn($row) => [
                     'loading' => 'lazy',
-                    'data-bs-toggle' => "modal", 
+                    'data-bs-toggle' => "modal",
                     'data-bs-target' => '#exampleModal' . $row->id,
                 ])
                 ->sortable(),

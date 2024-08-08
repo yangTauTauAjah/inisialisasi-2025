@@ -36,11 +36,15 @@
                         </div>
                         <button class="btn btn-primary btn-block btn-lg shadow-lg mt-2">Log in</button>
                     </form>
+                    <div class="content text-center">
+                        <p class="mt-3">Atau</p>
+                        <p class="mt-3"><a href="">Saya adalah mahasiswa baru</a></p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block">
                 <div id="auth-right">
-                    <img src="{{ asset('inis\fotbar.jpg')}}" alt="foto" style="height: 100vh">
+                    <img src="{{ asset('inis/images/fotbar.jpg')}}" alt="foto" style="height: 100vh">
                 </div>
             </div>
         </div>

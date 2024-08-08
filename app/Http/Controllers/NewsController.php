@@ -12,7 +12,9 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $countBerita = News::where('category', 'Berita')->count();
+        $countPengumuman = News::where('category', 'Pengumuman')->count();
+        return view('admin.berita.index', compact('countBerita' ,'countPengumuman'));
     }
 
     /**
@@ -20,7 +22,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.berita.create');
     }
 
     /**
@@ -28,7 +30,14 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'news_title' => $request->news_title,
+            'category' => $request->category,
+            'content' => $request->content
+        ];
+
+        News::insert($data);
+        return redirect('admin/berita-dan-pengumuman')->with('success', 'Postingan berhasil ditambahkan');
     }
 
     /**
@@ -44,7 +53,7 @@ class NewsController extends Controller
      */
     public function edit(news $news)
     {
-        //
+        return view('admin.berita.view');
     }
 
     /**

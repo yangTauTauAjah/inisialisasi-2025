@@ -4,6 +4,7 @@ use App\Http\Controllers\FileManagerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SubTaskController;
 use App\Http\Controllers\TaskGroupController;
 use App\Http\Middleware\AdminMiddleware;
@@ -35,10 +36,15 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
+// News Controller
+Route::resource('/admin/berita-dan-pengumuman', NewsController::class);
+
 // Tugas Controller
 Route::get('/task-manager', [SubTaskController::class, 'list_tugas']);
 Route::resource('task', SubTaskController::class);
 Route::resource('task-group', TaskGroupController::class);
+
+
 
 // login
 Route::get('/login', [LoginController::class, 'index']);

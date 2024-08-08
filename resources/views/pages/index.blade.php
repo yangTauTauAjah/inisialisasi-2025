@@ -59,12 +59,16 @@
                             <a href="/" class="logo m-0 float-start">INISIALISASI 2024<span
                                     class="text-primary">.</span></a>
                         </div>
-                        <div class="col-log-7 col-4 text-end ">
+                        <div class="col-lg-9 col-4 text-end ">
                             <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
                                 <li class="active"><a href="index.html">Home</a></li>
                                 <li><a href="#tatatertib">Tata Tertib</a></li>
-                                <li><a href="/penugasan">Penugasan Alim</a></li>
-                                <li><a href="/task">Penugasan Alif</a></li>
+                                {{-- <li><a href="/penugasan">Penugasan Alim</a></li> --}}
+                                <li><a href="#">Berita & Pengumuman</a></li>
+                                @auth
+                                    <li><a href="/task">Admin</a></li>
+                                @endauth
+                                <li><a href="/login">Login</a></li>
                             </ul>
                             <a href="#"
                                 class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
@@ -122,30 +126,38 @@
                 <div class="col-lg-7 mb-4 mb-lg-0">
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="{{ asset('inis/images/fotbar.jpg')}}" class="d-block w-100" alt="foto-inis">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="{{ asset('inis/images/IMG_7779.jpg')}}" class="d-block w-100" alt="foto-inis">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="{{ asset('inis/images/IMG_8923.jpg')}}" class="d-block w-100" alt="foto-inis">
-                          </div>
+                            <div class="carousel-item active">
+                                <img src="{{ asset('inis/images/fotbar.jpg') }}" class="d-block w-100"
+                                    alt="foto-inis">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('inis/images/IMG_7779.jpg') }}" class="d-block w-100"
+                                    alt="foto-inis">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('inis/images/IMG_8923.jpg') }}" class="d-block w-100"
+                                    alt="foto-inis">
+                            </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
-                      </div>
+                    </div>
                 </div>
                 <div class="col-lg-4 ps-lg-2">
                     <div class="mb-5">
@@ -161,41 +173,64 @@
         </div>
     </div>
     <div class="section sec-features" id="tatatertib">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="0">
-					<div class="feature d-flex gap-2 justify-content-center">
-							<h2 class="heading text-white mb-3">Peraturan INISIALISASI 2024</h2>
-					</div>
-					<div class="feature d-flex justify-text">
-                        <ul class="mb-4 text-white ul-1" >
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature d-flex gap-2 justify-content-center">
+                        <h2 class="heading text-white mb-3">Peraturan INISIALISASI 2024</h2>
+                    </div>
+                    <div class="feature d-flex justify-text">
+                        <ul class="mb-4 text-white ul-1">
                             <li class="li-1">1. Peserta wajib datang ke tempat 30 menit sebelum acara dimulai</li>
                             <li class="li-1">2. Peserta wajib memakai seragam sesuai ketentuan</li>
                             <li class="li-1">3. Peserta wajib memakai atribut dan id card sesuai ketentuan</li>
-                            <li class="li-1">4. Peserta yang tidak memakai seragam dan atribut sesuai ketentuan akan dikenakan pengurangan poin</li>
-                            <li class="li-1">5. Peserta yang terlambat hadir akan dikenakan pengurangan poin sesuai ketentuan dan hukuman yang berlaku</li>
-                            <li class="li-1">6. Peserta wajib untuk mengikuti semua kegiatan inisialisasi yang telah ditentukan</li>
-                            <li class="li-1">7. Kedatangan 80% dari setiap kelompok, jika kedatangan anggota kelompok tidak mencapai 80% maka akan dikenakan pengurangan poin kecuali bagi mahasiswa yang sudah izin ke kakak asuh bahwa tidak bisa mengikuti inisialisasi</li>
+                            <li class="li-1">4. Peserta yang tidak memakai seragam dan atribut sesuai ketentuan akan
+                                dikenakan pengurangan poin</li>
+                            <li class="li-1">5. Peserta yang terlambat hadir akan dikenakan pengurangan poin sesuai
+                                ketentuan dan hukuman yang berlaku</li>
+                            <li class="li-1">6. Peserta wajib untuk mengikuti semua kegiatan inisialisasi yang telah
+                                ditentukan</li>
+                            <li class="li-1">7. Kedatangan 80% dari setiap kelompok, jika kedatangan anggota kelompok
+                                tidak mencapai 80% maka akan dikenakan pengurangan poin kecuali bagi mahasiswa yang
+                                sudah izin ke kakak asuh bahwa tidak bisa mengikuti inisialisasi</li>
                             <li class="li-1">8. Peserta dilarang membawa senjata tajam dan senjata api</li>
-                            <li class="li-1">9. Peserta dilarang membawa rokok, miras, vape beserta liquid nya, serta obat-obatan terlarang lainnya</li>
+                            <li class="li-1">9. Peserta dilarang membawa rokok, miras, vape beserta liquid nya, serta
+                                obat-obatan terlarang lainnya</li>
                             <li class="li-1">10. Peserta dilarang memakai aksesoris dan make up yang berlebihan</li>
-                            <li class="li-1">11. Peserta tidak diperbolehkan meninggalkan kegiatan yang sedang berlangsung tanpa seizin panitia/kakak asuh</li>
-                            <li class="li-1">12. Pada saat waktu menyanyikan lagu Indonesia Raya dan Hymne Airlangga peserta dimohon wajib berdiri dengan sikap sempurna serta menampakkan seragam yang dikenakan dan meletakkan tangan kanan di bagian dada sebelah kiri</li>
-                            <li class="li-1">13. Peserta wajib untuk memperhatikan dan mencatat seluruh materi yang disampaikan selama kegiatan berlangsung di booklet yang sudah ditentukan</li>
-                            <li class="li-1">14. Peserta wajib menjaga kekondusifan selama materi berlangsung saat pemateri menyampaikan materi. Tidak diperkenankan untuk membahas hal yang diluar topik. Saat ingin bertanya, peserta diwajibkan meminta izin kepada pemateri dengan angkat tangan terlebih dahulu dan setelah diizinkan peserta diperbolehkan bertanya</li>
-                            <li class="li-1">15. Peserta diperbolehkan ke kamar mandi di sela-sela rangkaian kegiatan dengan meminta izin terlebih dahulu kepada panitia/kakak asuh, apabila sudah diizinkan peserta diperbolehkan ke kamar mandi</li>
-                            <li class="li-1">16. Peserta diwajibkan untuk menyelesaikan penugasan yang telah diberikan sesuai waktu yang telah ditentukan. Apabila terlambat / tidak menyelesaikan penugasan, maka akan dikenakan pengurangan poin</li>
-                            <li class="li-1">17. Untuk mahasiswa baru yang berhalangan dan tidak bisa mengikuti rangkaian kegiatan diharapkan izin 3 - 4 hari sebelum acara dimulai kepada kakak asuh dengan menyertakan alasannya</li>
-                            <li class="li-1">18. Untuk mahasiswa baru yang sakit pada saat sebelum / saat acara INISIALISASI 2024 berlangsung, dihimbau untuk segera izin kepada kakak asuh. Apabila tidak menghubungi kakak asuh, maka akan dianggap tidak hadi</li>
-                            <li class="li-1">19. Peserta wajib menjaga barang pribadinya, jika terdapat kehilangan bukan termasuk tanggung jawab panitia</li>
-                            <li class="li-1">20. Peserta dianjurkan membawa obat-obatan pribadi (apabila membutuhkan)</li>
+                            <li class="li-1">11. Peserta tidak diperbolehkan meninggalkan kegiatan yang sedang
+                                berlangsung tanpa seizin panitia/kakak asuh</li>
+                            <li class="li-1">12. Pada saat waktu menyanyikan lagu Indonesia Raya dan Hymne Airlangga
+                                peserta dimohon wajib berdiri dengan sikap sempurna serta menampakkan seragam yang
+                                dikenakan dan meletakkan tangan kanan di bagian dada sebelah kiri</li>
+                            <li class="li-1">13. Peserta wajib untuk memperhatikan dan mencatat seluruh materi yang
+                                disampaikan selama kegiatan berlangsung di booklet yang sudah ditentukan</li>
+                            <li class="li-1">14. Peserta wajib menjaga kekondusifan selama materi berlangsung saat
+                                pemateri menyampaikan materi. Tidak diperkenankan untuk membahas hal yang diluar topik.
+                                Saat ingin bertanya, peserta diwajibkan meminta izin kepada pemateri dengan angkat
+                                tangan terlebih dahulu dan setelah diizinkan peserta diperbolehkan bertanya</li>
+                            <li class="li-1">15. Peserta diperbolehkan ke kamar mandi di sela-sela rangkaian kegiatan
+                                dengan meminta izin terlebih dahulu kepada panitia/kakak asuh, apabila sudah diizinkan
+                                peserta diperbolehkan ke kamar mandi</li>
+                            <li class="li-1">16. Peserta diwajibkan untuk menyelesaikan penugasan yang telah
+                                diberikan sesuai waktu yang telah ditentukan. Apabila terlambat / tidak menyelesaikan
+                                penugasan, maka akan dikenakan pengurangan poin</li>
+                            <li class="li-1">17. Untuk mahasiswa baru yang berhalangan dan tidak bisa mengikuti
+                                rangkaian kegiatan diharapkan izin 3 - 4 hari sebelum acara dimulai kepada kakak asuh
+                                dengan menyertakan alasannya</li>
+                            <li class="li-1">18. Untuk mahasiswa baru yang sakit pada saat sebelum / saat acara
+                                INISIALISASI 2024 berlangsung, dihimbau untuk segera izin kepada kakak asuh. Apabila
+                                tidak menghubungi kakak asuh, maka akan dianggap tidak hadi</li>
+                            <li class="li-1">19. Peserta wajib menjaga barang pribadinya, jika terdapat kehilangan
+                                bukan termasuk tanggung jawab panitia</li>
+                            <li class="li-1">20. Peserta dianjurkan membawa obat-obatan pribadi (apabila membutuhkan)
+                            </li>
                         </ul>
-					</div>
+                    </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     {{-- <div class="section sec-portfolio bg-light pb-5	" id="about">
         <div class="container">
@@ -219,7 +254,8 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="d-flex gap-2 text-center">
-                    <h2 class="heading text-primary" data-aos="fade-up" data-aos-delay="0">Peraturan Berpakaian INISIALISASI 2024</h2>
+                    <h2 class="heading text-primary" data-aos="fade-up" data-aos-delay="0">Peraturan Berpakaian
+                        INISIALISASI 2024</h2>
                 </div>
 
             </div>
@@ -234,15 +270,18 @@
                             </div>
                             <div class="text justify-text">
                                 <blockquote>
-                                    <p><h3>Mahasiswa Baru Putra :</h3>
-                                        1. Memakai kemeja putih (rapi, tidak ketat, dan tidak transparan).<br>
-                                        2. Memakai celana kain panjang warna hitam (bukan jeans atau chino,rapi, tidak ketat, tidak transparan, tidak bermotif, bukan cutbray atau skinny).<br>
-                                        3. Memakai ikat pinggang berwarna hitam<br>
-                                        4. Rambut rapi dan tidak boleh dicat/diwarnai, apabila rambut panjang harap dikuncir rapi.<br>
-                                        5. Memakai ID CARD<br>
-                                        6. Memakai kaos kaki berwarna putih<br>
-                                        7. Memakai sepatu bebas berwarna hitam<br>
-                                        </p>
+                                    <p>
+                                    <h3>Mahasiswa Baru Putra :</h3>
+                                    1. Memakai kemeja putih (rapi, tidak ketat, dan tidak transparan).<br>
+                                    2. Memakai celana kain panjang warna hitam (bukan jeans atau chino,rapi, tidak
+                                    ketat, tidak transparan, tidak bermotif, bukan cutbray atau skinny).<br>
+                                    3. Memakai ikat pinggang berwarna hitam<br>
+                                    4. Rambut rapi dan tidak boleh dicat/diwarnai, apabila rambut panjang harap dikuncir
+                                    rapi.<br>
+                                    5. Memakai ID CARD<br>
+                                    6. Memakai kaos kaki berwarna putih<br>
+                                    7. Memakai sepatu bebas berwarna hitam<br>
+                                    </p>
                                 </blockquote>
                                 {{-- <div class="author">
                                     <strong class="d-block text-black">John Campbell</strong>
@@ -259,14 +298,18 @@
                             </div>
                             <div class="text justify-text">
                                 <blockquote>
-                                    <p><h3>Mahasiswa Baru Putri Berkerudung:</h3>
-                                        1. Memakai kemeja putih (rapi, tidak ketat, dan tidak transparan).<br>
-                                        2. Memakai rok panjang kain warna hitam model wiru/rample (rapi, tidak ketat, tidak transparan, tidak bermotif, tanpa belahan)<br>
-                                        3. Memakai kerudung warna hitam segiempat simetris (tidak transparan, tidak bermotif, tidak berenda, tanpa aksesoris tambahan kecuali peniti ataupun jarum pentul).<br>
-                                        4. Memakai ID CARD<br>
-                                        5. Memakai ikat pinggang berwarna hitam<br>
-                                        6. Memakai kaos kaki berwarna putih<br>
-                                        7. Memakai sepatu bebas berwarna hitam<br>
+                                    <p>
+                                    <h3>Mahasiswa Baru Putri Berkerudung:</h3>
+                                    1. Memakai kemeja putih (rapi, tidak ketat, dan tidak transparan).<br>
+                                    2. Memakai rok panjang kain warna hitam model wiru/rample (rapi, tidak ketat, tidak
+                                    transparan, tidak bermotif, tanpa belahan)<br>
+                                    3. Memakai kerudung warna hitam segiempat simetris (tidak transparan, tidak
+                                    bermotif, tidak berenda, tanpa aksesoris tambahan kecuali peniti ataupun jarum
+                                    pentul).<br>
+                                    4. Memakai ID CARD<br>
+                                    5. Memakai ikat pinggang berwarna hitam<br>
+                                    6. Memakai kaos kaki berwarna putih<br>
+                                    7. Memakai sepatu bebas berwarna hitam<br>
                                     </p>
                                 </blockquote>
                             </div>
@@ -280,14 +323,16 @@
                             </div>
                             <div class="text justify-text">
                                 <blockquote>
-                                    <p><h3>Mahasiswa Baru Putri :</h3>
-                                        1. Memakai kemeja putih (rapi, tidak ketat, dan tidak transparan).<br>
-                                        2. Memakai rok panjang kain warna hitam model wiru/rample (rapi, tidak ketat, tidak transparan, tidak bermotif, tanpa belahan)<br>
-                                        3. Rambut dikuncir rapi dan tidak boleh dicat/diwarnai.<br>
-                                        4. Memakai ID CARD<br>
-                                        5. Memakai ikat pinggang berwarna hitam<br>
-                                        6. Memakai kaos kaki berwarna putih<br>
-                                        7. Memakai sepatu bebas berwarna hitam<br></p>
+                                    <p>
+                                    <h3>Mahasiswa Baru Putri :</h3>
+                                    1. Memakai kemeja putih (rapi, tidak ketat, dan tidak transparan).<br>
+                                    2. Memakai rok panjang kain warna hitam model wiru/rample (rapi, tidak ketat, tidak
+                                    transparan, tidak bermotif, tanpa belahan)<br>
+                                    3. Rambut dikuncir rapi dan tidak boleh dicat/diwarnai.<br>
+                                    4. Memakai ID CARD<br>
+                                    5. Memakai ikat pinggang berwarna hitam<br>
+                                    6. Memakai kaos kaki berwarna putih<br>
+                                    7. Memakai sepatu bebas berwarna hitam<br></p>
                                 </blockquote>
                             </div>
                         </div>
@@ -300,26 +345,39 @@
     <div class="section sec-cta overlay" style="background-image: url('inis/images/fotbar.jpg')">
         <div class="container">
             <div class="row mb-5">
-				<div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="0">
-					<div class="feature d-flex gap-2 justify-content-center">
-						<h2 class="heading text-white mb-3">Ketentuan Point INISIALISASI 2024</h2>
+                <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature d-flex gap-2 justify-content-center">
+                        <h2 class="heading text-white mb-3">Ketentuan Point INISIALISASI 2024</h2>
                     </div>
                     <div class="feature d-flex gap-2 justify-content-center justify-text text-white">
                         <ul class="ul-2">
-                            <li>Setiap bentuk pelanggaran akan dikenakan pengurangan poin dengan rincian sebagai berikut: Terlambat mengikuti akan dikenakan pengurangan sebagai berikut :
+                            <li>Setiap bentuk pelanggaran akan dikenakan pengurangan poin dengan rincian sebagai
+                                berikut: Terlambat mengikuti akan dikenakan pengurangan sebagai berikut :
                                 <ul class="ul-3">
-                                    <li class="li-1">Apabila terlambat 5 - 15 menit dari dimulainya acara maka akan dikenakan pengurangan sebesar 5 poin.</li>
-                                    <li class="li-1">Apabila terlambat lebih dari 15 menit dari dimulainya acara, maka akan dikenakan pengurangan sebesar 10 poin.</li>
-                                    <li class="li-1">Apabila telat mengumpulkan resume lebih dari 15 menit dari waktu yang ditentukan maka akan dikenakan pengurangan sebesar 5 poin.</li>
-                                    <li class="li-1">Apabila tidak mengumpulkan resume maka akan dikenakan pengurangan sebesar 10 poin.</li>
+                                    <li class="li-1">Apabila terlambat 5 - 15 menit dari dimulainya acara maka akan
+                                        dikenakan pengurangan sebesar 5 poin.</li>
+                                    <li class="li-1">Apabila terlambat lebih dari 15 menit dari dimulainya acara,
+                                        maka akan dikenakan pengurangan sebesar 10 poin.</li>
+                                    <li class="li-1">Apabila telat mengumpulkan resume lebih dari 15 menit dari waktu
+                                        yang ditentukan maka akan dikenakan pengurangan sebesar 5 poin.</li>
+                                    <li class="li-1">Apabila tidak mengumpulkan resume maka akan dikenakan
+                                        pengurangan sebesar 10 poin.</li>
                                 </ul>
                             </li>
-                            <li>Setiap bentuk pelanggaran selama acara INISIALISASI 2024 berlangsung akan dikenakan pengurangan poin dengan rincian sebagai berikut:
+                            <li>Setiap bentuk pelanggaran selama acara INISIALISASI 2024 berlangsung akan dikenakan
+                                pengurangan poin dengan rincian sebagai berikut:
                                 <ul class="ul-3">
-                                    <li class="li-1">Apabila seragam dan atribut tidak sesuai dengan ketentuan maka akan dikenakan pengurangan poin sebesar 100 poin.</li>
-                                    <li class="li-1">Apabila Mahasiswa Baru terdeteksi membawa barang-barang yang dilarang seperti senjata tajam, senjata api, rokok, vape beserta liquidnya, miras, dan obat-obatan terlarang, maka akan dikenakan pengurangan sebesar 500 point.</li>
-                                    <li class="li-1">Apabila Mahasiswa Baru terdeteksi melakukan joki dalam mengerjakan tugas atau melakukan kecurangan yang serupa maka tidak akan mendapatkan poin penugasan.</li>
-                                    <li class="li-1">Mahasiswa baru diwajibkan untuk mengumpulkan minimal 3000 poin agar dapat lulus dan dikukuhkan.</li>
+                                    <li class="li-1">Apabila seragam dan atribut tidak sesuai dengan ketentuan maka
+                                        akan dikenakan pengurangan poin sebesar 100 poin.</li>
+                                    <li class="li-1">Apabila Mahasiswa Baru terdeteksi membawa barang-barang yang
+                                        dilarang seperti senjata tajam, senjata api, rokok, vape beserta liquidnya,
+                                        miras, dan obat-obatan terlarang, maka akan dikenakan pengurangan sebesar 500
+                                        point.</li>
+                                    <li class="li-1">Apabila Mahasiswa Baru terdeteksi melakukan joki dalam
+                                        mengerjakan tugas atau melakukan kecurangan yang serupa maka tidak akan
+                                        mendapatkan poin penugasan.</li>
+                                    <li class="li-1">Mahasiswa baru diwajibkan untuk mengumpulkan minimal 3000 poin
+                                        agar dapat lulus dan dikukuhkan.</li>
                                 </ul>
                             </li>
                         </ul>
