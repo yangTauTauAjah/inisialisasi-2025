@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penugasan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -182,15 +183,19 @@
                 </div>
                 <div class="assignment">
                     <p>Id Card</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/idcard" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
                     <p>Nama dan Logo angkatan</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/angkatan" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
                     <p>Booklet</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/booklet" class="btn">Buka Tugas</a>
+                </div>
+                <div class="assignment">
+                    <p>Database Angkatan</p>
+                    <a href="/penugasan/dbangkatan" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
                     <div class="container mt-5">
@@ -224,16 +229,16 @@
                     <p>Pengumuman: Membawa Snack Bantal & Minuman Bisa Tambah</p>
                 </div>
                 <div class="assignment">
-                    <p>Video Prodi</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <p>Mencatat Materi</p>
+                    <a href="/penugasan/catatan1" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
-                    <p>Mencatat Materi</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <p>Beyond Boundaries</p>
+                    <a href="/penugasan/boundaries" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
                     <p>Database Kating</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/dbkating" class="btn">Buka Tugas</a>
                 </div>
             </div>
         </div>
@@ -246,16 +251,16 @@
                     <p>Pengumuman: Membawa Snack Confess & Air Dugem</p>
                 </div>
                 <div class="assignment">
-                    <p>Poster Digital</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <p>Mencatat Materi</p>
+                    <a href="/penugasan/catatan2" class="btn">Buka Tugas</a>
+                </div>
+                <div class="assignment">
+                    <p>Express Creativity</p>
+                    <a href="/penugasan/expresscreativity" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
                     <p>Vlog Mini</p>
-                    <a href="#" class="btn">Buka Tugas</a>
-                </div>
-                <div class="assignment">
-                    <p>Mencatat Materi</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/vlog" class="btn">Buka Tugas</a>
                 </div>
             </div>
 
@@ -270,11 +275,15 @@
                 </div>
                 <div class="assignment">
                     <p>Mencatat Materi</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/catatan3" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
                     <p>Essay FGD</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/essay" class="btn">Buka Tugas</a>
+                </div>
+                <div class="assignment">
+                    <p>Express Creativity</p>
+                    <a href="/penugasan/expresscreativity2" class="btn">Buka Tugas</a>
                 </div>
             </div>
         </div>
@@ -288,15 +297,15 @@
                 </div>
                 <div class="assignment">
                     <p>Mencatat Materi</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/catatan4" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
-                    <p>Video Pemimpin</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <p>Ethical Leader</p>
+                    <a href="/penugasan/ethicalleader" class="btn">Buka Tugas</a>
                 </div>
                 <div class="assignment">
                     <p>Database Kating 2</p>
-                    <a href="#" class="btn">Buka Tugas</a>
+                    <a href="/penugasan/dbkating2" class="btn">Buka Tugas</a>
                 </div>
             </div>
         </div>

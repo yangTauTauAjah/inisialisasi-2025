@@ -63,7 +63,7 @@
                             <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
                                 <li class="active"><a href="index.html">Home</a></li>
                                 <li><a href="#tatatertib">Tata Tertib</a></li>
-                                {{-- <li><a href="/penugasan">Penugasan Alim</a></li> --}}
+                                <li><a href="/penugasan/index">Penugasan Alim</a></li>
                                 <li><a href="#">Berita & Pengumuman</a></li>
                                 @auth
                                     <li><a href="/task">Admin</a></li>
@@ -457,14 +457,15 @@
               **==========
             -->
 
-                    <p>Copyright &copy;
+                    {{-- <p>Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());
                         </script>. All Rights Reserved. &mdash; Designed with love by <a
                             href="https://untree.co">Untree.co</a> Distributed By <a
                             href="https://themewagon.com">ThemeWagon</a>
                         <!-- License information: https://untree.co/license/ -->
-                    </p>
+                    </p> --}}
+                        &copy; 2024 INISIALISASI - D4 Teknik Informatika
                 </div>
             </div>
         </div> <!-- /.container -->
