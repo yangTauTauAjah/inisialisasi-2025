@@ -63,6 +63,12 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+        }
     </style>
 </head>
 <body>
