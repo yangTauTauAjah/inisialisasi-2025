@@ -69,6 +69,7 @@
                                     <li><a href="/task">Admin</a></li>
                                 @endauth
                                 <li><a href="/login">Login</a></li>
+                                <li><a href="/penugasan/temp">temp</a></li>
                             </ul>
                             <a href="#"
                                 class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
