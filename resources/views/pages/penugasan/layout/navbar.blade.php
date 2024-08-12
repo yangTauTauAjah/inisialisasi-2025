@@ -3,7 +3,7 @@
         <ion-icon name="menu-outline"></ion-icon>
     </div>
 
-    <div class="">
+    <div class="header">
         <label>
             <h1> penugasan </h1>
         </label>

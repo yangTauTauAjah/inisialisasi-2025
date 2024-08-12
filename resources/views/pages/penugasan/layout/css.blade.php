@@ -19,6 +19,13 @@
     overflow-x: hidden;
     }
 
+    .header {
+        font-family: Arial, sans-serif;
+        color: #6c63ff;
+        padding: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        }
     .container {
     position: relative;
     width: 100%;
