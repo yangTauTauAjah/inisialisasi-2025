@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>Catatan</title>
     <style>
         body {
@@ -31,9 +32,23 @@
             background-color: #6c63ff;
             color: white;
             padding: 20px;
-            text-align: center;
-            text-align: center;
+            position: relative;
             margin-bottom: 20px;
+        }
+        .header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        .header .btn-back {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 0;
         }
         .accordion {
             background-color: #fff;
@@ -63,10 +78,19 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+        }
     </style>
 </head>
 <body>
     <div class="header">
+        <button class="btn-back" onclick="window.history.back()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
         <h1>Penugasan</h1>
     </div>
     <div class="container mt-4">

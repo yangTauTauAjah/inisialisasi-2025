@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas Booklet Mahasiswa Baru</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,9 +31,23 @@
             background-color: #6c63ff;
             color: white;
             padding: 20px;
-            text-align: center;
-            text-align: center;
+            position: relative;
             margin-bottom: 20px;
+        }
+        .header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        .header .btn-back {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 0;
         }
         .accordion {
             background-color: #fff;
@@ -87,6 +102,9 @@
 </head>
 <body>
     <div class="header">
+        <button class="btn-back" onclick="window.history.back()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
         <h1>Penugasan</h1>
     </div>
     <div class="container mt-4">
@@ -102,13 +120,20 @@
         <div class="formula">
             Ukuran booklet:<br>
             A = 25<br>
-            B = 17,6
+            <img src="/inis/images/penugasan/soal1.jpg" alt=""><br>
+            B = 17<br>
+            <img src="/inis/images/penugasan/soal2.jpg" alt="">
         </div>
-
+        <ul>
+            <li>Booklet terdiri atas</li>
+            <li>Cover depan dan belakang booklet diberi mika dengan ukuran sesuai dengan kertas booklet</li>
+            <li>Booklet dijilid dengan menggunakan ring plastik berwarna hitam</li>
+            <li>Setiap halaman booklet diberi nomor halaman yang terletak di tengah bagian bawah</li>
+        </ul>
         <h2>Format Penempatan Isi Booklet</h2>
         <ul>
             <li><strong>Cover Booklet</strong></li>
-            <li><strong>Hal 1</strong>: Berisi mengenai foto diri formal berukuran 4x6 dan deskripsi diri minimal 150-250 kata</li>
+            <li><strong>Hal 1</strong>: Berisi mengenai foto diri formal berukuran 4x6 dan deskripsi diri minimal 150-250 kata dan alasan masuk D4 Teknik Informatika</li>
             <li><strong>Hal 2</strong>: Berisi nama dan foto kelompok dengan ketentuan:
                 <ul>
                     <li>Ukuran foto 3R</li>
@@ -133,7 +158,7 @@
 
         <h2>Pengumpulan Tugas</h2>
         <p>Pengumpulan dalam bentuk PDF yang berisi scan booklet dari cover sampai halaman 32 dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_BOOKLET.pdf</span></p>
-        <p><span class="highlight">Tugas paling lambat dikumpulkan pada …</span></p>
+        <p>Tugas paling lambat dikumpulkan pada <span class="highlight">27 September 2024 pukul 19.00</span></p>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>
             @if ($message = Session::get('success'))

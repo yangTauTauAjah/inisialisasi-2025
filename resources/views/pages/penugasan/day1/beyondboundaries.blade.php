@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beyond Boundaries</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,9 +32,23 @@
             background-color: #6c63ff;
             color: white;
             padding: 20px;
-            text-align: center;
-            text-align: center;
+            position: relative;
             margin-bottom: 20px;
+        }
+        .header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        .header .btn-back {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 0;
         }
         .accordion {
             background-color: #fff;
@@ -89,6 +104,9 @@
 </head>
 <body>
     <div class="header">
+        <button class="btn-back" onclick="window.history.back()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
         <h1>Penugasan</h1>
     </div>
     <div class="container mt-4">
@@ -122,7 +140,7 @@
             </li>
             <h2>Pengumpulan Tugas</h2>
             <li>Pengumpulan dalam bentuk PDF yang berisi screenshot tugas beserta link video dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_BeyondBoundaries.pdf</span></li>
-            <li>Tugas paling lambat dikumpulkan pada …</li>
+            <li>Tugas paling lambat dikumpulkan pada <span class="highlight">4 Oktober 2024 pukul 19.00 WIB</span></li>
         </ul>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>

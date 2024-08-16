@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas Biodata Mahasiswa Angkatan 2024</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,9 +31,23 @@
             background-color: #6c63ff;
             color: white;
             padding: 20px;
-            text-align: center;
-            text-align: center;
+            position: relative;
             margin-bottom: 20px;
+        }
+        .header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        .header .btn-back {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 0;
         }
         .accordion {
             background-color: #fff;
@@ -118,6 +133,9 @@
 </head>
 <body>
     <div class="header">
+        <button class="btn-back" onclick="window.history.back()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
         <h1>Penugasan</h1>
     </div>
     <div class="container mt-4">
@@ -136,7 +154,7 @@
                     <li>Nama Lengkap</li>
                     <li>Nama Panggilan</li>
                     <li>NIM</li>
-                    <li>Alamat</li>
+                    <li>Asal</li>
                     <li>Instagram</li>
                     <li>First Impression</li>
                 </ul>
@@ -144,7 +162,8 @@
         </ul>
 
         <h2>Format Penulisan</h2>
-        <div class="biodata">
+        <img src="/inis/images/penugasan/dbangkatan.jpg" alt="">
+        {{-- <div class="biodata">
             <div class="biodata-item">
                 <img src="https://via.placeholder.com/150" alt="Foto Mahasiswa">
                 <h3>Nama Lengkap: John Doe</h3>
@@ -172,7 +191,7 @@
                 <p><strong>Instagram:</strong> @alexsmith</p>
                 <p><strong>First Impression:</strong> Energik dan penuh ide!</p>
             </div>
-        </div>
+        </div> --}}
         <h2>Pengumpulan Tugas</h2>
             <p>Pengumpulan tugas dilakukan dalam bentuk PDF dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_NamaTugas.pdf</span></p>
             <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas Nama dan Logo Angkatan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,9 +31,23 @@
             background-color: #6c63ff;
             color: white;
             padding: 20px;
-            text-align: center;
-            text-align: center;
+            position: relative;
             margin-bottom: 20px;
+        }
+        .header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        .header .btn-back {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 0;
         }
         .accordion {
             background-color: #fff;
@@ -78,6 +93,9 @@
 </head>
 <body>
     <div class="header">
+        <button class="btn-back" onclick="window.history.back()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
         <h1>Penugasan</h1>
     </div>
     <div class="container mt-4">
@@ -93,8 +111,8 @@
             <li>Setiap warna dan bentuk dari logo angkatan wajib mengandung esensi atau makna.</li>
         </ul>
         <h2>Pengumpulan Tugas</h2>
-            <p>Pengumpulan tugas dilakukan dalam bentuk PDF dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_NamaTugas.pdf</span></p>
-            <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>
+            <p>Logo dan nama angkatan dikumpulkan pada <span class="highlight">24 September 2024  melalui komandan tingkat.</span></p>
+            {{-- <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>
         <p>Logo dan nama angkatan dikumpulkan pada tanggal … ke - melalui komandan tingkat.</p>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>
@@ -114,7 +132,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Upload</button>
             </form>
-        </div>
+        </div> --}}
         <div class="footer">
             &copy; 2024 INISIALISASI - D4 Teknik Informatika
         </div>
