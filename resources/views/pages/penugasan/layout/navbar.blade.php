@@ -10,6 +10,5 @@
     </div>
 
     <div class="user">
-        <img src="assets/imgs/customer01.jpg" alt="">
     </div>
 </div>

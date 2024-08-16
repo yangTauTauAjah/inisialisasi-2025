@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="img-wrap">
-                        <img src="inis/images/logo.png" alt="Image" class="img-fluid rounded">
+                        <img src="inis/images/logokertas.png" alt="Image" class="img-fluid rounded">
                     </div>
                 </div>
             </div>

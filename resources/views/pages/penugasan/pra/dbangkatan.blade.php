@@ -162,36 +162,9 @@
         </ul>
 
         <h2>Format Penulisan</h2>
-        <img src="/inis/images/penugasan/dbangkatan.jpg" alt="">
-        {{-- <div class="biodata">
-            <div class="biodata-item">
-                <img src="https://via.placeholder.com/150" alt="Foto Mahasiswa">
-                <h3>Nama Lengkap: John Doe</h3>
-                <p><strong>Nama Panggilan:</strong> John</p>
-                <p><strong>NIM:</strong> 12345678</p>
-                <p><strong>Alamat:</strong> Jl. Example No. 1, Surabaya</p>
-                <p><strong>Instagram:</strong> @johndoe</p>
-                <p><strong>First Impression:</strong> Seru dan ramah!</p>
-            </div>
-            <div class="biodata-item">
-                <img src="https://via.placeholder.com/150" alt="Foto Mahasiswa">
-                <h3>Nama Lengkap: Jane Doe</h3>
-                <p><strong>Nama Panggilan:</strong> Jane</p>
-                <p><strong>NIM:</strong> 87654321</p>
-                <p><strong>Alamat:</strong> Jl. Example No. 2, Surabaya</p>
-                <p><strong>Instagram:</strong> @janedoe</p>
-                <p><strong>First Impression:</strong> Cerdas dan kreatif!</p>
-            </div>
-            <div class="biodata-item">
-                <img src="https://via.placeholder.com/150" alt="Foto Mahasiswa">
-                <h3>Nama Lengkap: Alex Smith</h3>
-                <p><strong>Nama Panggilan:</strong> Alex</p>
-                <p><strong>NIM:</strong> 11223344</p>
-                <p><strong>Alamat:</strong> Jl. Example No. 3, Surabaya</p>
-                <p><strong>Instagram:</strong> @alexsmith</p>
-                <p><strong>First Impression:</strong> Energik dan penuh ide!</p>
-            </div>
-        </div> --}}
+        <div class="image-wrapper">
+            <img src="/inis/images/penugasan/dbangkatan.jpg" alt="" class="img-fluid">
+        </div>
         <h2>Pengumpulan Tugas</h2>
             <p>Pengumpulan tugas dilakukan dalam bentuk PDF dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_NamaTugas.pdf</span></p>
             <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>

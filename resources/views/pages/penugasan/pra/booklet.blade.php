@@ -119,10 +119,14 @@
         <p>Booklet berbentuk persegi panjang dengan ukuran yang sudah ditentukan. Untuk mengetahui ukuran booklet maka pecahkan terlebih dahulu rumus-rumus berikut ini:</p>
         <div class="formula">
             Ukuran booklet:<br>
-            A = 25<br>
-            <img src="/inis/images/penugasan/soal1.jpg" alt=""><br>
-            B = 17<br>
-            <img src="/inis/images/penugasan/soal2.jpg" alt="">
+            A =<br>
+            <div class="image-wrapper">
+                <img src="/inis/images/penugasan/soal1.jpg" alt="" class="img-fluid"><br>
+            </div>
+            B =<br>
+            <div class="imgae-wrapper">
+                <img src="/inis/images/penugasan/soal2.jpg" alt="" class="img-fluid">
+            </div>
         </div>
         <ul>
             <li>Booklet terdiri atas</li>

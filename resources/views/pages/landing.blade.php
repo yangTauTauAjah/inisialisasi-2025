@@ -11,7 +11,7 @@
         }
 
         .camera-lens {
-            background-image: url('{{ asset('inis/images/logo.png') }}');
+            background-image: url('{{ asset('inis/images/logo2.jpg') }}');
         }
     </style>
 </head>

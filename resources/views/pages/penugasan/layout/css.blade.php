@@ -284,7 +284,7 @@
     justify-content: space-between;
     align-items: flex-start;
     }
-    .cardHeader h2 {
+    .cardHeader h3 {
     font-weight: 600;
     color: var(--blue);
     }
@@ -465,4 +465,15 @@
         left: initial;
     }
     }
+    .image-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 </style>

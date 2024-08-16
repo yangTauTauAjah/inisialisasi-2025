@@ -3,7 +3,7 @@
     <div class="details">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Pengumuman: Membawa Snack pipa berlumpur dan minuman bukan milikku (chocolatos dan milku)</h2>
+                <h3>Pengumuman: Membawa Snack pipa berlumpur dan minuman bukan milikku</h3>
             </div>
         </div>
     </div>
@@ -13,6 +13,9 @@
                 <div>
                     <div class="cardName">Catatan</div>
                 </div>
+                <div class="iconBx">
+                    <ion-icon name="pencil-outline"></ion-icon>
+                </div>
             </div>
         </a>
 
@@ -21,6 +24,9 @@
                 <div>
                     <div class="cardName">Database Kating 2</div>
                 </div>
+                <div class="iconBx">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </div>
             </div>
         </a>
 
@@ -28,6 +34,9 @@
             <div class="card">
                 <div>
                     <div class="cardName">Ethical Leader</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="people-circle-outline"></ion-icon>
                 </div>
             </div>
         </a>
