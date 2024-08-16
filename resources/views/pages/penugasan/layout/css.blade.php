@@ -265,18 +265,14 @@
     /* ================== Order Details List ============== */
     .details {
     position: relative;
-    width: 100%;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
+    display: flex;
     /* margin-top: 10px; */
     }
 
     .details .recentOrders {
     position: relative;
-    display: grid;
-    min-height: 500px;
+    display: flex;
     background: var(--white);
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -294,11 +290,9 @@
     }
     .cardHeader .btn {
     position: relative;
-    padding: 5px 10px;
     background: var(--blue);
     text-decoration: none;
     color: var(--white);
-    border-radius: 6px;
     }
 
     .details table {

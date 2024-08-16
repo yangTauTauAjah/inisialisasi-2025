@@ -5,7 +5,7 @@
                 <span class="icon">
                     <ion-icon name="logo-apple"></ion-icon>
                 </span>
-                <span class="title">Brand Name</span>
+                <span class="title">Inisialisasi 2024</span>
             </a>
         </li>
 

@@ -19,16 +19,18 @@ Route::get('/index', function () {
 });
 
 // Penugasan
-Route::get('/penugasan/index', function () {
-    return view('pages.penugasan.penugasan');
-});
-Route::get('/penugasan/temp', function () {
+// Route::get('/penugasan/index', function () {
+//     return view('pages.penugasan.penugasan');
+// });
+Route::get('/penugasan/index
+', function () {
     return view('pages.penugasan.layout.main');
 });
 
 // pra
 Route::get('/penugasan/pra', function () {
-    return view('pages.penugasan.pra.temp');
+    return view('pages.penugasan.pra.index
+    ');
 });
 Route::get('/penugasan/idcard', function () {
     return view('pages.penugasan.pra.idcard');
@@ -45,7 +47,8 @@ Route::get('/penugasan/dbangkatan', function () {
 
 //day1
 Route::get('/penugasan/day1', function () {
-    return view('pages.penugasan.day1.temp');
+    return view('pages.penugasan.day1.index
+    ');
 });
 Route::get('/penugasan/catatan1', function () {
     return view('pages.penugasan.day1.catatan');
@@ -59,7 +62,8 @@ Route::get('/penugasan/dbkating', function () {
 
 //day2
 Route::get('/penugasan/day2', function () {
-    return view('pages.penugasan.day2.temp');
+    return view('pages.penugasan.day2.index
+    ');
 });
 Route::get('/penugasan/catatan2', function () {
     return view('pages.penugasan.day2.catatan');
@@ -73,7 +77,8 @@ Route::get('/penugasan/vlog', function () {
 
 //day3
 Route::get('/penugasan/day3', function () {
-    return view('pages.penugasan.day3.temp');
+    return view('pages.penugasan.day3.index
+    ');
 });
 Route::get('/penugasan/catatan3', function () {
     return view('pages.penugasan.day3.catatan');
@@ -87,7 +92,8 @@ Route::get('/penugasan/expresscreativity2', function () {
 
 //day4
 Route::get('/penugasan/day4', function () {
-    return view('pages.penugasan.day4.temp');
+    return view('pages.penugasan.day4.index
+    ');
 });
 Route::get('/penugasan/catatan4', function () {
     return view('pages.penugasan.day4.catatan');
@@ -101,7 +107,8 @@ Route::get('/penugasan/ethicalleader', function () {
 
 //day5
 Route::get('/penugasan/day5', function () {
-    return view('pages.penugasan.day5.temp');
+    return view('pages.penugasan.day5.index
+    ');
 });
 
 Route::get('/task', function () {

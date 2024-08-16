@@ -111,8 +111,8 @@
             <li>Setiap warna dan bentuk dari logo angkatan wajib mengandung esensi atau makna.</li>
         </ul>
         <h2>Pengumpulan Tugas</h2>
-            <p>Pengumpulan tugas dilakukan dalam bentuk PDF dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_NamaTugas.pdf</span></p>
-            <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>
+            <p>Logo dan nama angkatan dikumpulkan pada <span class="highlight">24 September 2024  melalui komandan tingkat.</span></p>
+            {{-- <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>
         <p>Logo dan nama angkatan dikumpulkan pada tanggal … ke - melalui komandan tingkat.</p>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>
@@ -132,7 +132,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Upload</button>
             </form>
-        </div>
+        </div> --}}
         <div class="footer">
             &copy; 2024 INISIALISASI - D4 Teknik Informatika
         </div>

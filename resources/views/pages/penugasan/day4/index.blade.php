@@ -1,14 +1,17 @@
 @extends('pages.penugasan.layout.main')
 @section('content')
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Pengumuman: Membawa Snack pipa berlumpur dan minuman bukan milikku (chocolatos dan milku)</h2>
+            </div>
+        </div>
+    </div>
     <div class="cardBox">
         <a href="/penugasan/catatan4">
             <div class="card">
                 <div>
                     <div class="cardName">Catatan</div>
-                </div>
-
-                <div class="iconBx">
-                    <ion-icon name="eye-outline"></ion-icon>
                 </div>
             </div>
         </a>
@@ -18,10 +21,6 @@
                 <div>
                     <div class="cardName">Database Kating 2</div>
                 </div>
-
-                <div class="iconBx">
-                    <ion-icon name="cart-outline"></ion-icon>
-                </div>
             </div>
         </a>
 
@@ -29,10 +28,6 @@
             <div class="card">
                 <div>
                     <div class="cardName">Ethical Leader</div>
-                </div>
-
-                <div class="iconBx">
-                    <ion-icon name="chatbubbles-outline"></ion-icon>
                 </div>
             </div>
         </a>

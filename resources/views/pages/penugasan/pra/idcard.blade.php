@@ -117,7 +117,7 @@
             </h2>
         </div>
         <div class="forum-card accordion card-body">
-            <p>Mahasiswa baru D4 Teknik Informatika angkatan 2023 <span class="highlight">WAJIB</span> membuat ID Card dengan ketentuan:</p>
+            <p>Mahasiswa baru D4 Teknik Informatika angkatan 2024 <span class="highlight">WAJIB</span> membuat ID Card dengan ketentuan:</p>
             <ul>
                 <li>ID Card dibuat dari template design yang sudah disiapkan oleh Panitia INISIALISASI 2024.</li>
                 <li>ID Card diprint pada kertas buffalo coklat dengan ukuran.</li>
@@ -128,14 +128,33 @@
                 <li>Foto gaya bebas, sopan dengan ukuran 3x4.</li>
                 <li>Berkerudung hitam (bagi yang berkerudung).</li>
                 <li>Memakai baju dengan warna sesuai dengan warna kelompok, yaitu:</li>
+                <ul>
+                    <li>laravel : cream</li>
+                    <li>zend : hijau</li>
+                    <li>symphony : kuning</li>
+                    <li>lumen : merah</li>
+                    <li>slim : hitam</li>
+                    <li>dart : abu abu</li>
+                    <li>phalcon : cokelat</li>
+                    <li>flutter : ungu</li>
+                    <li>laminas : biru muda</li>
+                    <li>flight : orange</li>
+                </ul>
             </ul>
-            <div class="group-colors">
-                <div>Kelompok Merah</div>
-                <div>Kelompok Biru</div>
-                <div>Kelompok Hijau</div>
-            </div>
             <h2>Tali ID CARD</h2>
-            <p>Tali ID CARD menggunakan pita yang terdiri dari 2 warna wajib (biru tua dan putih) ditambah dengan warna kelompok.</p>
+            <p>Tali ID CARD menggunakan pita (2x22mm) yang terdiri dari 2 warna wajib (biru tua dan putih) ditambah dengan warna kelompok, penjelasan mengenai warna kelompok adalah sebagai berikut :</p>
+            <ul>
+                <li>laravel : cream</li>
+                <li>zend : hijau</li>
+                <li>symphony : kuning</li>
+                <li>lumen : merah</li>
+                <li>slim : hitam</li>
+                <li>dart : abu abu</li>
+                <li>phalcon : cokelat</li>
+                <li>flutter : ungu</li>
+                <li>laminas : biru muda</li>
+                <li>flight : orange</li>
+            </ul>
             <p>Dihimbau bagi setiap kelompok memakai tali dengan warna yang senada. Ketiga warna tersebut buat menjadi lanyard berbentuk kepang.</p>
             <h2>Name Tag</h2>
             <p>Name Tag ditulis tangan (manual) yang berisi data diri sebagai berikut:</p>
@@ -144,9 +163,11 @@
                 <li>Nama panggilan</li>
                 <li>Nama kelompok</li>
             </ul>
+            <h2>Contoh ID Card</h2>
+            <img src="/inis/images/penugasan/idcard.jpg" alt="">
             <h2>Pengumpulan Tugas</h2>
             <p>Pengumpulan dalam bentuk PDF yang berisi foto diri menggunakan ID Card dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_IDCARD.pdf</span></p>
-            <p><span class="highlight">Tugas paling lambat dikumpulkan pada …</span></p>
+            <p>Tugas paling lambat dikumpulkan pada <span class="highlight">14 September  2024 pukul 19.00 WIB</span></p>
             <div class="container mt-5">
                 <h2 class="text-center">Upload File</h2>
                 @if ($message = Session::get('success'))

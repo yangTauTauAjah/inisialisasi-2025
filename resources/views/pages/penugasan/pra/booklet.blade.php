@@ -120,13 +120,20 @@
         <div class="formula">
             Ukuran booklet:<br>
             A = 25<br>
-            B = 17,6
+            <img src="/inis/images/penugasan/soal1.jpg" alt=""><br>
+            B = 17<br>
+            <img src="/inis/images/penugasan/soal2.jpg" alt="">
         </div>
-
+        <ul>
+            <li>Booklet terdiri atas</li>
+            <li>Cover depan dan belakang booklet diberi mika dengan ukuran sesuai dengan kertas booklet</li>
+            <li>Booklet dijilid dengan menggunakan ring plastik berwarna hitam</li>
+            <li>Setiap halaman booklet diberi nomor halaman yang terletak di tengah bagian bawah</li>
+        </ul>
         <h2>Format Penempatan Isi Booklet</h2>
         <ul>
             <li><strong>Cover Booklet</strong></li>
-            <li><strong>Hal 1</strong>: Berisi mengenai foto diri formal berukuran 4x6 dan deskripsi diri minimal 150-250 kata</li>
+            <li><strong>Hal 1</strong>: Berisi mengenai foto diri formal berukuran 4x6 dan deskripsi diri minimal 150-250 kata dan alasan masuk D4 Teknik Informatika</li>
             <li><strong>Hal 2</strong>: Berisi nama dan foto kelompok dengan ketentuan:
                 <ul>
                     <li>Ukuran foto 3R</li>
@@ -151,7 +158,7 @@
 
         <h2>Pengumpulan Tugas</h2>
         <p>Pengumpulan dalam bentuk PDF yang berisi scan booklet dari cover sampai halaman 32 dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_BOOKLET.pdf</span></p>
-        <p><span class="highlight">Tugas paling lambat dikumpulkan pada …</span></p>
+        <p>Tugas paling lambat dikumpulkan pada <span class="highlight">27 September 2024 pukul 19.00</span></p>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>
             @if ($message = Session::get('success'))

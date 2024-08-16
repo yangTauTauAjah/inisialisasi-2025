@@ -116,11 +116,11 @@
         <div class="forum-card accordion card-body">
         <h2>Ketentuan:</h2>
         <ul>
-            <li>Mahasiswa baru wajib membuat esai yang berisi:
+            <li>Mahasiswa baru wajib membuat Essay dengan ketentuan sebagai berikut :
                 <ul>
-                    <li>Rangkuman FGD yang telah kalian lakukan.</li>
-                    <li>Sudut pandang kalian mengenai persoalan FGD yang telah diangkat.</li>
-                    <li>Pendapat tentang hasil FGD yang telah diputuskan.</li>
+                    <li>Essay berisi rangkuman fgd yang telah kalian lakukan.</li>
+                    <li>Sudut pandang kalian mengenai persoalan fgd yang telah diangkat.</li>
+                    <li>Pendapat tentang hasil fgd yang telah diputuskan.</li>
                 </ul>
             </li>
             <li>Esai ditulis menggunakan font <span class="highlight">Times New Roman</span> ukuran 12, margin 3,3,3,3, dan rata kanan kiri.</li>
@@ -130,7 +130,7 @@
 
         <h2>Pengumpulan:</h2>
         <p>Esai dikumpulkan dalam bentuk PDF dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_Essay.pdf</span></p>
-        <p>Tugas paling lambat dikumpulkan pada <span class="highlight">...</span></p>
+        <p>Tugas paling lambat dikumpulkan pada <span class="highlight">20 Oktober 2024 pukul 19.00 WIB</span></p>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>
             @if ($message = Session::get('success'))

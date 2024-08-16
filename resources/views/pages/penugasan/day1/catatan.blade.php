@@ -101,7 +101,7 @@
         <div class="forum-card accordion card-body">
             <h2>Pengumpulan Tugas</h2>
         <p>Pengumpulan dalam bentuk PDF berisi scan halaman booklet dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_Catatan1.pdf</span></p>
-        <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>
+        <p>Tugas paling lambat dikumpulkan pada <span class="highlight"></span></p>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>
             @if ($message = Session::get('success'))

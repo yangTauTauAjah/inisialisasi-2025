@@ -116,7 +116,7 @@
         <div class="forum-card accordion card-body">
             <h2>Ketentuan:</h2>
             <p>Mahasiswa baru wajib membuat video dengan ketentuan sebagai berikut:</p>
-            <p>Mahasiswa baru akan diberikan sebuah permasalahan mengenai organisasi berdasarkan studi kasus yang telah ditentukan:</p>
+            <p>Mahasiswa baru akan diberikan sebuah permasalahan mengenai organisasi: </p>
             <ul>
                 <li><strong>Studi Kasus 1:</strong> Flight, Slim, Laminas</li>
                 <li><strong>Studi Kasus 2:</strong> Zend, Laravel</li>
@@ -133,7 +133,7 @@
 
             <h2>Pengumpulan Tugas</h2>
             <p>Pengumpulan tugas dilakukan dalam bentuk PDF yang berisi screenshot tugas beserta link video dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_NamaTugas.pdf</span></p>
-            <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>
+            <p>Tugas paling lambat dikumpulkan pada <span class="highlight">15 November 2024 pukul 19.00 WIB</span></p>
             <div class="container mt-5">
                 <h2 class="text-center">Upload File</h2>
                 @if ($message = Session::get('success'))

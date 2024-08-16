@@ -123,16 +123,16 @@
                     <ul>
                         <li>Keseharian mereka dalam membagi waktu selama menjadi mahasiswa baru.</li>
                         <li>Tips and trick membagi atau memanage waktu mereka agar tidak terbuang sia-sia.</li>
-                        <li>Video dibuat sekreatif mungkin.</li>
                     </ul>
                 </li>
+                <li>Video dibuat sekreatif mungkin.</li>
                 <li>Durasi video minimal 2 menit.</li>
                 <li>Video diunggah di akun Instagram pribadi dengan caption bebas dan hashtag <span class="highlight">#INISIALISASI24 #D4TeknikInformatika #BanggaVokasi #UNAIR #NAMAKELOMPOK</span></li>
             </ul>
 
             <h2>Pengumpulan Tugas:</h2>
             <p>Pengumpulan dalam bentuk PDF yang berisi screenshot tugas beserta link video dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_MYVG.pdf</span></p>
-            <p>Tugas paling lambat dikumpulkan pada <span class="highlight">...</span></p>
+            <p>Tugas paling lambat dikumpulkan pada <span class="highlight">18 Oktober 2024 pukul 19.00 WIB</span></p>
             <div class="container mt-5">
                 <h2 class="text-center">Upload File</h2>
                 @if ($message = Session::get('success'))

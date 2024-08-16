@@ -154,7 +154,7 @@
                     <li>Nama Lengkap</li>
                     <li>Nama Panggilan</li>
                     <li>NIM</li>
-                    <li>Alamat</li>
+                    <li>Asal</li>
                     <li>Instagram</li>
                     <li>First Impression</li>
                 </ul>
@@ -162,7 +162,8 @@
         </ul>
 
         <h2>Format Penulisan</h2>
-        <div class="biodata">
+        <img src="/inis/images/penugasan/dbangkatan.jpg" alt="">
+        {{-- <div class="biodata">
             <div class="biodata-item">
                 <img src="https://via.placeholder.com/150" alt="Foto Mahasiswa">
                 <h3>Nama Lengkap: John Doe</h3>
@@ -190,7 +191,7 @@
                 <p><strong>Instagram:</strong> @alexsmith</p>
                 <p><strong>First Impression:</strong> Energik dan penuh ide!</p>
             </div>
-        </div>
+        </div> --}}
         <h2>Pengumpulan Tugas</h2>
             <p>Pengumpulan tugas dilakukan dalam bentuk PDF dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_NamaTugas.pdf</span></p>
             <p>Tugas paling lambat dikumpulkan pada <span class="highlight">…</span></p>

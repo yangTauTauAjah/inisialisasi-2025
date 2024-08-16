@@ -1,14 +1,17 @@
 @extends('pages.penugasan.layout.main')
 @section('content')
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Pengumuman: Membawa Ciki simpan dulu dan air lumpur (taro dan susu coklat)</h2>
+            </div>
+        </div>
+    </div>
     <div class="cardBox">
         <a href="/penugasan/catatan3">
             <div class="card">
                 <div>
                     <div class="cardName">Catatan</div>
-                </div>
-
-                <div class="iconBx">
-                    <ion-icon name="eye-outline"></ion-icon>
                 </div>
             </div>
         </a>
@@ -18,10 +21,6 @@
                 <div>
                     <div class="cardName">Essay</div>
                 </div>
-
-                <div class="iconBx">
-                    <ion-icon name="cart-outline"></ion-icon>
-                </div>
             </div>
         </a>
 
@@ -29,10 +28,6 @@
             <div class="card">
                 <div>
                     <div class="cardName">Express Creativity 2</div>
-                </div>
-
-                <div class="iconBx">
-                    <ion-icon name="chatbubbles-outline"></ion-icon>
                 </div>
             </div>
         </a>

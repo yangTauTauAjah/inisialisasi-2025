@@ -140,7 +140,7 @@
             </li>
             <h2>Pengumpulan Tugas</h2>
             <li>Pengumpulan dalam bentuk PDF yang berisi screenshot tugas beserta link video dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_BeyondBoundaries.pdf</span></li>
-            <li>Tugas paling lambat dikumpulkan pada …</li>
+            <li>Tugas paling lambat dikumpulkan pada <span class="highlight">4 Oktober 2024 pukul 19.00 WIB</span></li>
         </ul>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>

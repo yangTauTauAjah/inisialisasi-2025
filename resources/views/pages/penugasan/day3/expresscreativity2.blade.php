@@ -181,14 +181,13 @@
 
         <h2>Format Poster:</h2>
         <ul>
-            <li>Halaman 1 cover berisi topik permasalahan yang diangkat dan judul solusi yang telah dirundingkan bersama kelompok.</li>
-            <li>Halaman 2 berisi poster yang telah dibuat bersama kelompok (sekreatif mungkin).</li>
-            <li>Membuat rincian mengenai penjabaran pembagian tugas dan partisipasi setiap anggota disertakan bukti.</li>
+            <li>Halaman 1 berisi poster yang telah dibuat bersama kelompok (sekreatif mungkin).</li>
+            <li>Halaman 2 cover berisi topik permasalahan yang diangkat dan judul solusi yang telah rundingkan bersama kelompok dan membuat rincian mengenai penjabaran pembagian tugas dan partisipasi setiap anggota disertakan bukti.</li>
         </ul>
 
         <h2>Format Pengumpulan:</h2>
         <p>Poster dikumpulkan dalam bentuk PDF dengan format nama: <span class="highlight">NAMAKELOMPOK_Tema_Poster.pdf</span></p>
-        <p>Tugas paling lambat dikumpulkan pada <span class="highlight">...</span></p>
+        <p>Tugas paling lambat dikumpulkan pada <span class="highlight">8 November 2024 pukul 19.00 WIB</span></p>
         <div class="container mt-5">
             <h2 class="text-center">Upload File</h2>
             @if ($message = Session::get('success'))
