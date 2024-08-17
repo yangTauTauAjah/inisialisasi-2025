@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('task_groups', function (Blueprint $table) {
             $table->id();
             $table->string('task_group_name');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

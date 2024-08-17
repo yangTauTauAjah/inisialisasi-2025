@@ -16,14 +16,15 @@ class MabaMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::check() === false) {
+        if (!Auth::check()) {
             return redirect('login');
         }
-
-        if (Auth::check() || Auth::user()->isAdmin === false) {
-            return redirect('/');
+    
+        if (!Auth::user()->isAdmin) {
+            return $next($request);
         }
-
-        return redirect('login');
+    
+        // Redirect non-admin users to a specific page
+        return redirect('/index'); 
     }
 }

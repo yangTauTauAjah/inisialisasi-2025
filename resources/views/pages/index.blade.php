@@ -63,13 +63,24 @@
                             <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
                                 <li class="active"><a href="index.html">Home</a></li>
                                 <li><a href="#tatatertib">Tata Tertib</a></li>
-                                <li><a href="/penugasan/index">Penugasan Alim</a></li>
                                 <li><a href="#">Berita & Pengumuman</a></li>
                                 @auth
-                                    <li><a href="/task">Admin</a></li>
+                                    <li><a href="/penugasan/index">Penugasan</a></li>
                                 @endauth
-                                <li><a href="/login">Login</a></li>
-                                <li><a href="/penugasan/temp">temp</a></li>
+                                @if (Auth::user()->isAdmin === 1)
+                                    <li><a href="/dashboard">Penugasan</a></li>
+                                @endif
+                                @if (!Auth::check())
+                                    <li><a href="/login">Login</a></li>
+                                @else
+                                    <li>
+                                        <form action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <input type="submit" class="" value="Logout" class="btn btn-sm">
+                                        </form>
+                                    </li>
+                                @endif
+                                {{-- <li><a href="/penugasan/temp">temp</a></li> --}}
                             </ul>
                             <a href="#"
                                 class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
@@ -466,7 +477,7 @@
                             href="https://themewagon.com">ThemeWagon</a>
                         <!-- License information: https://untree.co/license/ -->
                     </p> --}}
-                        &copy; 2024 INISIALISASI - D4 Teknik Informatika
+                    &copy; 2024 INISIALISASI - D4 Teknik Informatika
                 </div>
             </div>
         </div> <!-- /.container -->

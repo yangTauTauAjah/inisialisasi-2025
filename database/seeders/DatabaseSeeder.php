@@ -19,23 +19,40 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         
-        // TaskGroup::create([
-        //     'task_group_name' => 'PRA INISIALISASI'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 1'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 2'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 3'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 4'
-        // ]);
+        TaskGroup::create([
+            'task_group_name' => 'PRA INISIALISASI',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 1',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 2',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 3',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 4',
+            'active' => 1
+        ]);
+        
+        User::create([
+            'name' => 'admin_ksk',
+            'email' => 'admin@gmail.com',
+            'isAdmin' => 1,
+            'kelompok' => '-',
+            'password' => bcrypt('12345678'),
+        ]);
+        
+
+        $this->call(CsvDataSeeder::class);
+        
         // User::factory(100)->create();
-        FileManager::factory(200)->create();
+        // FileManager::factory(200)->create();
 
         // FileManager::create([
         //     'SubTask_id' => 1,

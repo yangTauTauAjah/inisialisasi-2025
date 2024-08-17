@@ -9,7 +9,7 @@ class SubTask extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['task_group_id', 'task_name', 'task_description', 'task_due', 'task_done', 'task_file'];
+    protected $fillable = ['task_group_id', 'task_name', 'task_description', 'task_due', 'task_done', 'task_file', 'file_links'] ;
 
     public function fileManagers()
     {

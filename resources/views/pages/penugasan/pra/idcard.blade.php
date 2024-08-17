@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,9 @@
             padding: 0;
             background-color: #f9f9f9;
         }
+
         .container {
-            border: 1px solid #e9ecef!important;
+            border: 1px solid #e9ecef !important;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -27,6 +29,7 @@
             margin: 0 auto;
             padding: 20px;
         }
+
         .header {
             background-color: #6c63ff;
             color: white;
@@ -55,31 +58,38 @@
             margin-bottom: 10px;
             border-radius: 5px;
         }
+
         .card-body {
             padding: 1.5rem;
             flex: 1 1 auto;
         }
+
         h2 {
             color: #2980b9;
             margin-bottom: 20px;
             border-bottom: 2px solid #2980b9;
             padding-bottom: 10px;
         }
+
         p {
             line-height: 1.6;
         }
+
         ul {
             margin-left: 20px;
         }
+
         .highlight {
             color: #e74c3c;
             font-weight: bold;
         }
+
         .group-colors {
             display: flex;
             justify-content: space-around;
             margin-top: 20px;
         }
+
         .group-colors div {
             width: 30%;
             padding: 10px;
@@ -87,6 +97,7 @@
             border-radius: 5px;
             text-align: center;
         }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -95,6 +106,7 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         .footer {
             text-align: center;
             margin-top: 30px;
@@ -103,6 +115,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <button class="btn-back" onclick="window.history.back()">
@@ -178,7 +191,7 @@
                         <strong>Uploaded File:</strong> {{ Session::get('file') }}
                     </div>
                 @endif
-                <form action="{{ route('file.upload') }}" method="POST" enctype="multipart/form-data">
+                <form action=" " method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="file" class="form-label">Choose File</label>
@@ -193,4 +206,5 @@
         </div>
     </div>
 </body>
+
 </html>
