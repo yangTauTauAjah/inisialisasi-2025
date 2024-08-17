@@ -4,6 +4,20 @@
 
     <div class="row">
         <div class="col">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             <div class="card">
                 <div class="d-flex align-items-center justify-content-between card-header">
                     <h5 class="m-0 p-0">Nama Sub Tugas</h5>
@@ -30,13 +44,14 @@
                                                 <div class="d-flex justify-content-between">
                                                     <li class="fw-bold" style="color: black">{{ $subTask->task_name }}</li>
                                                     <div class="control">
-                                                        <a href="{{ route('task.show', $subTask->id) }}"
-                                                            class="text-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                        <a href="" class="text-secondary"><i class="fa-solid fa-trash-can"></i></a>
+                                                        <a href="{{ route('task.edit', $subTask->id) }}"
+                                                            class="text-secondary"><i
+                                                                class="fa-solid fa-pen-to-square"></i></a>
+                                                        <a href="" class="text-secondary"><i
+                                                                class="fa-solid fa-trash-can"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex justify-content-between">
-                                                    <ol style="color: gray">{{ $subTask->task_description }}</ol>
                                                     <ol class="text-danger">{{ $subTask->task_due }}</ol>
                                                 </div>
                                             @endforeach
@@ -63,8 +78,10 @@
                                 <tr>
                                     <td>{{ $item->task_group_name }}</td>
                                     <td class="text-end">
-                                        <a href="" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                                        <a href="" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+                                        <a href="" class="btn btn-sm btn-warning"><i
+                                                class="fa-solid fa-pen-to-square"></i></a>
+                                        <a href="" class="btn btn-sm btn-danger"><i
+                                                class="fa-solid fa-trash-can"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -113,7 +130,7 @@
         </div>
     </div>
     <div class="modal fade" id="SubTugas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Tugas</h1>
@@ -137,14 +154,17 @@
                                 placeholder="membawa snack minuman">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="">Deskripsi</label>
-                            <input type="text" class="form-control" name="task_description"
-                                placeholder="aawidjawidjaiwjiajdiajwi">
-                        </div>
-                        <div class="form-group mb-3">
                             <label for="">Batas Pengumpulan</label>
                             <input type="datetime-local" class="form-control" name="task_due"
                                 placeholder="INISIALISASI Day 4">
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="isLinks">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Dikumpulkan sebagai link</label>
+                          </div>
+                        <div class="form-group mb-3">
+                            <label for="">Deskripsi singkat</label>
+                            <textarea id="summernote" name="task_description"></textarea>
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -154,4 +174,55 @@
             </div>
         </div>
     </div>
+
+@section('page-css')
+    <link rel="stylesheet" href="{{ asset('assets/summernote/summernote-lite.min.css') }}">
+@endsection
+
+@section('page-script')
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="{{ asset('assets/summernote/summernote-lite.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote({
+                height: 500,
+                toolbar: [
+                    ['style', ['style']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview']],
+                ],
+                popover: {
+                    image: [
+                        ['image', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+                        ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                        ['remove', ['removeMedia']]
+                    ],
+                    link: [
+                        ['link', ['linkDialogShow', 'unlink']]
+                    ],
+                    table: [
+                        ['add', ['addRowDown', 'addRowUp', 'addColLeft', 'addColRight']],
+                        ['delete', ['deleteRow', 'deleteCol', 'deleteTable']],
+                    ],
+                    air: [
+                        ['color', ['color']],
+                        ['font', ['bold', 'underline', 'clear']],
+                        ['para', ['ul', 'paragraph']],
+                        ['table', ['table']],
+                        ['insert', ['link', 'picture']]
+                    ]
+                }
+
+
+            });
+        });
+    </script>
+@endsection
+
 @endsection

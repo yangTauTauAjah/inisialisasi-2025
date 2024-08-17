@@ -11,7 +11,7 @@ class FileManager extends Model
 
     protected $table = 'file_managers';
 
-    protected $fillable = ['SubTask_id', 'user_id', 'file_name', 'file_path'];
+    protected $fillable = ['SubTask_id', 'user_id', 'file_name', 'file_path', 'file_links'];
 
     public function subTask()
     {

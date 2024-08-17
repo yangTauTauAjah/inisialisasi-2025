@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,9 @@
             padding: 0;
             background-color: #f9f9f9;
         }
+
         .container {
-            border: 1px solid #e9ecef!important;
+            border: 1px solid #e9ecef !important;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -28,6 +30,7 @@
             margin: 0 auto;
             padding: 20px;
         }
+
         .header {
             background-color: #6c63ff;
             color: white;
@@ -56,42 +59,51 @@
             margin-bottom: 10px;
             border-radius: 5px;
         }
+
         .card-body {
             padding: 1.5rem;
             flex: 1 1 auto;
         }
+
         h2 {
             color: #2980b9;
             margin-bottom: 20px;
             border-bottom: 2px solid #2980b9;
             padding-bottom: 10px;
         }
+
         p {
             line-height: 1.6;
             margin-bottom: 20px;
         }
+
         ul {
             margin-left: 20px;
             margin-bottom: 20px;
         }
+
         ul li {
             margin-bottom: 10px;
         }
+
         .highlight {
             color: #e74c3c;
             font-weight: bold;
         }
+
         .footer {
             text-align: center;
             margin-top: 30px;
             font-size: 0.9em;
             color: #888;
         }
+
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
         }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -102,6 +114,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <button class="btn-back" onclick="window.history.back()">
@@ -110,9 +123,11 @@
         <h1>Penugasan</h1>
     </div>
     <div class="container mt-4">
-        <div data-v-373b54c8="" class="col-12 d-flex justify-content-between align-items-center gap-3 flex-wrap flex-sm-nowrap mb-0"><h2 data-v-373b54c8="" class="font-semibold text-limit limit-1 ">
-            Beyond Boundaries
-        </h2>
+        <div data-v-373b54c8=""
+            class="col-12 d-flex justify-content-between align-items-center gap-3 flex-wrap flex-sm-nowrap mb-0">
+            <h2 data-v-373b54c8="" class="font-semibold text-limit limit-1 ">
+                Beyond Boundaries
+            </h2>
         </div>
         <div class="forum-card accordion card-body">
             <p>Mahasiswa baru wajib membuat video dengan ketentuan sebagai berikut:</p>
@@ -152,7 +167,7 @@
                     <strong>Uploaded File:</strong> {{ Session::get('file') }}
                 </div>
             @endif
-            <form action="{{ route('file.upload') }}" method="POST" enctype="multipart/form-data">
+            <form action=" " method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="file" class="form-label">Choose File</label>
@@ -167,6 +182,7 @@
         </div>
     </div>
 </body>
+
 </html>
 {{-- <!DOCTYPE html>
 <html lang="en">
