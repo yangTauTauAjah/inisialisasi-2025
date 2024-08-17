@@ -120,12 +120,13 @@ Route::get('/', function () {
 
 Route::get('/index', function () {
     return view('pages.index');
-});    
+});
 
+// admin aja yang bisa akses
 Route::middleware(AdminMiddleware::class)->group(function () {
     // dashboard
     Route::get('/dashboard', [AdminController::class, 'index']);
-    
+
     // Tugas Controller
     Route::get('/task-manager', [SubTaskController::class, 'list_tugas']);
     Route::resource('task', SubTaskController::class);
@@ -133,16 +134,32 @@ Route::middleware(AdminMiddleware::class)->group(function () {
 
 });
 
+// maba aja yang bisa akses
 Route::middleware(MabaMiddleware::class)->group(function () {
     // User Controller
+    Route::get('/penugasan/index', [UserController::class, 'index']);
+    Route::get('/penugasan/{task_group_name}/{id}', [UserController::class, 'show'])->name('task_group.detail');
+    Route::get('/penugasan/task_detail/{task_name}/{id}', [UserController::class, 'task_detail'])->name('task.detail');
+
+    // Upload file
+    Route::post('/upload-file/{id}', [FileUploadController::class, 'fileUpload'])->name('file.upload');
+    Route::post('/upload-links/{id}', [FileUploadController::class, 'store'])->name('upload.link');
+});
+
+
+// admin & maba bisa akses
+Route::group([], function () {
+    
+    // penugasan
     Route::get('/penugasan/index', [UserController::class, 'index']);
     Route::get('/penugasan/{task_group_name}/{id}', [UserController::class, 'show'])->name('task_group.detail');
     Route::get('/penugasan/task_detail/{task_name}/{id}', [UserController::class, 'task_detail'])->name('task.detail');
     
     // Upload file
     Route::post('/upload-file/{id}', [FileUploadController::class, 'fileUpload'])->name('file.upload');
+    Route::post('/upload-links/{id}', [FileUploadController::class, 'store'])->name('upload.link');
 });
-    
+
 
 // News Controller
 Route::resource('/admin/berita-dan-pengumuman', NewsController::class);
@@ -155,5 +172,4 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/set-password', [MabaController::class, 'setPassword'])->name('setPassword');
 
-Route::post('/upload-links/{id}', [FileUploadController::class, 'store'])->name('upload.link');
 
