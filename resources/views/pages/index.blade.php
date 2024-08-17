@@ -68,7 +68,7 @@
                                     <li><a href="/penugasan/index">Penugasan</a></li>
                                 @endauth
                                 @if (Auth::user()->isAdmin === 1)
-                                    <li><a href="/dashboard">Penugasan</a></li>
+                                    <li><a href="/dashboard">Dashboard Admin</a></li>
                                 @endif
                                 @if (!Auth::check())
                                     <li><a href="/login">Login</a></li>

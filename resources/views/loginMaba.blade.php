@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Inisialisasi 2024</title>
+    <title>Aktivasi Akun - Inisialisasi 2024</title>
     <link rel="stylesheet" href="assets/css/main/app.css">
     <link rel="stylesheet" href="assets/css/pages/auth.css">
     <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
@@ -17,8 +17,8 @@
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
-                    <h1 class="auth-title">Haloo</h1>
-                    <p class="auth-subtitle mb-5">cek NIM dulu sebelum login yaa</p>
+                    <h1 class="auth-title">Aktivasi</h1>
+                    <p class="auth-subtitle mb-5">Akun dulu yaa</p>
                     @if (session('error'))
                         <div class="alert alert-danger">
                             <p>{{ session('error') }}</p>
@@ -45,7 +45,7 @@
                                 <i class="bi bi-shield-lock"></i>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-2" value="Buat Akun" />
+                        <input type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-2" value="Aktivasi Akun" />
                     </form>
 
                     <div class="content text-center">

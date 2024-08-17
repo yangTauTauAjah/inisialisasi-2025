@@ -21,7 +21,7 @@ return new class extends Migration
             $table->longText('task_description');
             $table->dateTime('task_due');
             $table->boolean('active');
-            $table->string('isLinks');
+            $table->string('isLinks')->nullable();
             $table->timestamps();
         });
     }

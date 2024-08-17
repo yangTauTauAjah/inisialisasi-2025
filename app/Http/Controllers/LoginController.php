@@ -46,6 +46,7 @@ class LoginController extends Controller
 
         return redirect()->back()->with('error', 'NIM or Email is incorrect.');
     }
+    
     public function logout(Request $request)
     {
         Auth::logout();
