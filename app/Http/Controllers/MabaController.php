@@ -16,7 +16,7 @@ class MabaController extends Controller
         if ($userExists) {
             return view('setPassword')->with('success', 'Halo ' . $userExists->name)->with('user', $userExists);
         } else {
-            return redirect()->back()->withErrors(['error' => 'User with NIM not found.']);
+            return redirect()->back()->with(['error' => 'User with NIM not found.']);
         }
     }
 
@@ -24,13 +24,22 @@ class MabaController extends Controller
     {
         $user = User::where('nim', $request->nim)->first();
 
-        if ($user) {
-            $user->password = Hash::make($request->password);
-            $user->save();
-
-            return redirect('login')->with('success', 'Password has been set successfully.');
-        } else {
-            return redirect()->back()->withErrors(['error' => 'User with NIM not found.']);
+        if (!$user) {
+            return redirect()->back()->with('error','NIM kamu engga ditemukan, coba hubungi kakak PK kalian yaa.');
         }
+
+        // Check if the user has no password set
+        if (empty($user->password)) {
+            if ($request->filled('password')) {
+                $user->password = Hash::make($request->password);
+                $user->save();
+
+                return redirect('login')->with('success', 'Password barumu udah kesimpen, ayo coba login.');
+            } else {
+                return redirect()->back()->with('error','Password gabole kosong yaa.');
+            }
+        }
+
+        return redirect()->back()->with('error','Kamu udah pernah aktivasi akun .');
     }
 }

@@ -153,7 +153,6 @@ Route::get('/login-maba', [LoginController::class, 'Mabaindex']);
 Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/set-password', [MabaController::class, 'showSetPasswordForm'])->name('setPasswordForm');
 Route::post('/set-password', [MabaController::class, 'setPassword'])->name('setPassword');
 
 Route::post('/upload-links/{id}', [FileUploadController::class, 'store'])->name('upload.link');
