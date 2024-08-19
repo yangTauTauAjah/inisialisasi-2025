@@ -39,10 +39,10 @@ class FileUploadController extends Controller
             // file extension
             $fileExtension = $file->getClientOriginalExtension();
 
-            $filename = "tugas" . '.' . $fileExtension;
+            $filename = Auth::user()->nim . '.' . $fileExtension;
 
             $storage = Storage::disk(config('filesystems.default'));
-            $path = Storage::disk('public')->putFileAs('videos', $file, $filename);
+            $path = Storage::disk('public')->putFileAs('uploaded', $file, $filename);
 
             // Delete chunked files
             unlink($file->getPathname());

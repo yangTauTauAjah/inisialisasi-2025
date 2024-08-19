@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page Kamera</title>
-    <link rel="stylesheet" href="inis/css/landing.css">
+    <link rel="stylesheet" href="{{ asset('inis/css/landing.css')}}">
     <style>
         .camera-container {
             background-image: url('{{ asset('inis/images/bg.jpg') }}');

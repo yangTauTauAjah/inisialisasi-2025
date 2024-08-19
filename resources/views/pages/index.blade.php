@@ -21,19 +21,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="home/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="home/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('home/fonts/icomoon/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/fonts/flaticon/font/flaticon.css')}}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="home/css/tiny-slider.css">
-    <link rel="stylesheet" href="home/css/aos.css">
-    <link rel="stylesheet" href="home/css/glightbox.min.css">
-    <link rel="stylesheet" href="home/css/style.css">
+    <link rel="stylesheet" href="{{ asset('home/css/tiny-slider.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/css/aos.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/css/glightbox.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/css/style.css')}}">
 
-    <link rel="stylesheet" href="home/css/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ asset('home/css/flatpickr.min.css')}}">
 
-    <link rel="stylesheet" href="inis/css/app.css">
+    <link rel="stylesheet" href="{{ asset('inis/css/app.css')}}">
 
 
     <title>Inisalisasi 2024</title>
@@ -67,9 +67,11 @@
                                 @auth
                                     <li><a href="/penugasan/index">Penugasan</a></li>
                                 @endauth
-                                @if (Auth::user()->isAdmin === 1)
-                                    <li><a href="/dashboard">Dashboard Admin</a></li>
-                                @endif
+                                @auth
+                                    @if (Auth::user()->isAdmin === 1)
+                                        <li><a href="/dashboard">Dashboard Admin</a></li>
+                                    @endif
+                                @endauth
                                 @if (!Auth::check())
                                     <li><a href="/login">Login</a></li>
                                 @else
@@ -147,7 +149,7 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('inis/images/fotbar.jpg') }}" class="d-block w-100"
+                                <img src="{{ asset('inis/images/fotbar-2.jpg') }}" class="d-block w-100"
                                     alt="foto-inis">
                             </div>
                             <div class="carousel-item">
