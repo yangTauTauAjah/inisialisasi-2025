@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="{{ asset('inis/images/logoangkatan.png')}}">
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -136,7 +136,7 @@
                 </div>
             </div>
             <div class="row justify-content-center align-items-start">
-                <div class="col-lg-7 mb-4 mb-lg-0">
+                <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -172,7 +172,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-lg-4 ps-lg-2">
+                <div class="col-lg-4 ps-lg-2" data-aos="fade-left" data-aos-delay="500">
                     <div class="mb-5">
                         <h2 class="text-black h4"><strong>INISIALISASI</strong></h2>
                         <p>merupakan serangkaian
@@ -270,9 +270,7 @@
                     <h2 class="heading text-primary" data-aos="fade-up" data-aos-delay="0">Peraturan Berpakaian
                         INISIALISASI 2024</h2>
                 </div>
-
             </div>
-
 
             <div class="testimonial-slider-wrap">
                 <div class="testimonial-slider" id="testimonial-slider">
@@ -403,7 +401,7 @@
     <div class="site-footer">
         <div class="container">
             <div class="row">
-                {{-- <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="widget">
                         <h3>About</h3>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
@@ -417,17 +415,14 @@
                             <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
                         </ul>
                     </div> <!-- /.widget -->
-                </div> <!-- /.col-lg-4 --> --}}
+                </div> <!-- /.col-lg-4 -->
                 <div class="col-lg-6">
                     <div class="widget">
                         <h3>Company</h3>
                         <ul class="list-unstyled float-start links">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Vision</a></li>
-                            <li><a href="#">Mission</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Tata Tertib</a></li>
+                            <li><a href="#">Login</a></li>
                         </ul>
                         <ul class="list-unstyled float-start links">
                             <li><a href="#">Partners</a></li>
@@ -443,9 +438,9 @@
                     <div class="widget">
                         <h3>Navigation</h3>
                         <ul class="list-unstyled links mb-4">
-                            <li><a href="#">Our Vision</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Tata Tertib</a></li>
+                            <li><a href="#">Penugasan</a></li>
                         </ul>
 
                         <h3>Social</h3>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inisialisasi 2024</title>
+    <link rel="shortcut icon" href="{{ asset('inis/images/logoangkatan.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('inis/css/landing.css')}}">
     <style>
         .camera-container {
