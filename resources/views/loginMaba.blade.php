@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aktivasi Akun - Inisialisasi 2024</title>
-    <link rel="stylesheet" href="assets/css/main/app.css">
-    <link rel="stylesheet" href="assets/css/pages/auth.css">
-    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+    <link rel="stylesheet" href="{{ asset('assets/css/main/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/auth.css')}}">
+    <link rel="shortcut icon" href="{{ asset('inis/images/logoangkatan.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('inis/images/logoangkatan.png')}}" type="image/png">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
-                    <h1 class="auth-title">Aktivasi</h1>
-                    <p class="auth-subtitle mb-5">Akun dulu yaa</p>
+                    <h1 class="auth-title">Aktivasi Akun</h1>
+                    <p class="auth-subtitle mb-5">Akunmu di aktivasi dulu yaaa</p>
                     @if (session('error'))
                         <div class="alert alert-danger">
                             <p>{{ session('error') }}</p>
@@ -50,13 +50,13 @@
 
                     <div class="content text-center">
                         <p class="mt-3">Atau</p>
-                        <p class="mt-3"><a href="/login">Saya sudah membuat password</a></p>
+                        <p class="mt-3"><a href="/login">Kembali</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block">
                 <div id="auth-right">
-                    <img src="{{ asset('inis/images/fotbar.jpg') }}" alt="foto" style="height: 100vh">
+                    <img src="{{ asset('inis/images/IMG_3526.jpg') }}" alt="foto" style="height: 100vh">
                 </div>
             </div>
         </div>

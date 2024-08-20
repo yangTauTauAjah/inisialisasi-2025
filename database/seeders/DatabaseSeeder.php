@@ -41,43 +41,32 @@ class DatabaseSeeder extends Seeder
         ]);
         
         User::create([
-            'name' => 'admin_ksk',
+            'name' => 'Admin_KSK',
             'email' => 'admin@gmail.com',
             'isAdmin' => 1,
             'kelompok' => '-',
             'password' => bcrypt('12345678'),
         ]);
+
+        User::create([
+            'name' => 'Admin_inisialisasi2024',
+            'email' => 'inisialisasi2024@gmail.com',
+            'isAdmin' => 1,
+            'kelompok' => '-',
+            'password' => bcrypt('KENZI2024'),
+        ]);
+
+        User::create([
+            'name' => 'Test User',
+            'nim' => '123456789',
+            'isAdmin' => 0,
+            'kelompok' => 'Flutter',
+            'password' => bcrypt('qwertyuiop'),
+        ]);
         
 
         $this->call(CsvDataSeeder::class);
         
-        // User::factory(100)->create();
-        // FileManager::factory(200)->create();
-
-        // FileManager::create([
-        //     'SubTask_id' => 1,
-        //     'user_id' => 1,
-        //     'file_name' => 'dwddd.jpg',
-        //     'file_path' => 'dwddd.jpg'
-        // ]);
-
-        // sub_task::create([
-        //     'task_group_id' => 1,
-        //     'task_name' => 'Membawa minuman band',
-        //     'task_description' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_due' => Carbon::now(),
-        // ]);
-        // sub_task::create([
-        //     'task_group_id' => 2,
-        //     'task_name' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_description' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_due' => Carbon::now(),
-        // ]);
-        // sub_task::create([
-        //     'task_group_id' => 2,
-        //     'task_name' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_description' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_due' => Carbon::now(),
-        // ]);
+        
     }
 }
