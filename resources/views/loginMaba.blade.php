@@ -17,8 +17,8 @@
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
-                    <h1 class="auth-title">Aktivasi</h1>
-                    <p class="auth-subtitle mb-5">Akun dulu yaa</p>
+                    <h1 class="auth-title">Aktivasi Akun</h1>
+                    <p class="auth-subtitle mb-5">Akunmu di aktivasi dulu yaaa</p>
                     @if (session('error'))
                         <div class="alert alert-danger">
                             <p>{{ session('error') }}</p>
@@ -50,7 +50,7 @@
 
                     <div class="content text-center">
                         <p class="mt-3">Atau</p>
-                        <p class="mt-3"><a href="/login">Saya sudah membuat password</a></p>
+                        <p class="mt-3"><a href="/login">Kembali</a></p>
                     </div>
                 </div>
             </div>
