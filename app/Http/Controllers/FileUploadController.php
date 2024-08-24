@@ -3,46 +3,58 @@
 namespace App\Http\Controllers;
 
 use App\Models\FileManager;
+use App\Models\SubTask;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Pion\Laravel\ChunkUpload\Handler\HandlerFactory;
 use Pion\Laravel\ChunkUpload\Receiver\FileReceiver;
 
 class FileUploadController extends Controller
 {
+    public function fileUpload(Request $request, $id)
+    {
+        $subTask = SubTask::find($id); 
 
-
-    public function fileUpload(Request $request){
+        if (\Carbon\Carbon::now() >= \Carbon\Carbon::parse($subTask->task_due)) {
+            return redirect()->back()->with('error', 'The deadline for this task has passed.');
+        }
 
         // initialised 
         $receiver = new FileReceiver('file', $request, HandlerFactory::classFromRequest($request));
 
         // if not uploaded
-        if(!$receiver->isUploaded()){
+        if (!$receiver->isUploaded()) {
             return redirect()->back()->with('error', 'Check your internet connection');
         }
 
         $fileReceived = $receiver->receive();
-        
-        if($fileReceived->isFinished()){
-            
+
+        if ($fileReceived->isFinished()) {
+
             // uploaded file
             $file = $fileReceived->getFile();
 
             // file extension
             $fileExtension = $file->getClientOriginalExtension();
 
-            // $filename = str_replace('testing'. $fileExtension);
+            $filename = Auth::user()->nim . '.' . $fileExtension;
 
             $storage = Storage::disk(config('filesystems.default'));
-            $path = $storage->putFileAs('videos', $file, 'testing.mp4');
+            $path = Storage::disk('public')->putFileAs('uploaded', $file, $filename);
 
-            // delete chunked files
+            // Delete chunked files
             unlink($file->getPathname());
-            return [
-                'path' => asset('storage/' . $path),
-                'filename' => 'testing.mp4'
-            ];
+
+            FileManager::create([
+                'SubTask_id' => $id,
+                'user_id' => Auth::id(),
+                'file_name' => $filename,
+                'file_path' => $path
+            ]);
+
+
         }
 
         $handler = $fileReceived->handler();
@@ -52,25 +64,16 @@ class FileUploadController extends Controller
         ];
     }
 
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        // Validasi file yang diunggah
-        $request->validate([
-            'file' => 'required|file|max:102400', // Maksimal ukuran 100MB
+        FileManager::create([
+            'SubTask_id' => $id,
+            'user_id' => Auth::id(),
+            'file_name' => "-",
+            'file_path' => '-',
+            'file_links' => $request->isLinks
         ]);
 
-        // Dapatkan file yang diunggah
-        $file = $request->file('file');
-
-        // Dapatkan nama file asli
-        $filename = $file->getClientOriginalName();
-
-        // Simpan file ke storage (default: storage/app/public/uploads)
-        $filePath = $file->storeAs('uploads', $filename, 'public');
-
-        // Mengembalikan respons dengan pesan sukses
-        return back()
-            ->with('success', 'File berhasil diunggah!')
-            ->with('file', $filePath);
+        return redirect()->back();
     }
 }

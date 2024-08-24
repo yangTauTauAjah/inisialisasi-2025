@@ -173,7 +173,7 @@
                     <strong>Uploaded File:</strong> {{ Session::get('file') }}
                 </div>
             @endif
-            <form action="{{ route('file.upload') }}" method="POST" enctype="multipart/form-data">
+            <form action=" " method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="file" class="form-label">Choose File</label>

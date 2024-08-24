@@ -229,9 +229,10 @@
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 30px;
         }
-
+        
         .cardBox .card {
             position: relative;
+            height: 100%;
             background: var(--white);
             padding: 30px;
             border-radius: 20px;
@@ -583,8 +584,9 @@
                     </a>
                 </li>
                 @foreach ($allTask as $taskGroup)
-                    <li class="{{ (request()->is('penugasan*')) ? 'active' : '' }}">
-                        <a href="{{ route('task_group.detail', ['task_group_name' => $taskGroup->task_group_name, 'id' => $taskGroup->id]) }}">
+                    <li class="{{ request()->is('penugasan*') ? 'active' : '' }}">
+                        <a
+                            href="{{ route('task_group.detail', ['task_group_name' => $taskGroup->task_group_name, 'id' => $taskGroup->id]) }}">
                             <span class="icon">
                                 <ion-icon name="logo-apple"></ion-icon>
                             </span>
@@ -613,53 +615,15 @@
 
             <!-- === Cards === -->
             <div class="cardBox">
-                <a href="/">
-                    <div class="card">
-                        <div>
-                            <div class="cardName">Daily Views</div>
+                @foreach ($data->subTasks as $subTask)
+                    <a href="{{ route('task.detail', ['task_name' => $subTask->task_name, 'id' => $subTask->id]) }}">
+                        <div class="card">
+                            <div>
+                                <div class="cardName">{{ $subTask->task_name }}</div>
+                            </div>
                         </div>
-
-                        <div class="iconBx">
-                            <ion-icon name="eye-outline"></ion-icon>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="card">
-                        <div>
-                            <div class="cardName">Sales</div>
-                        </div>
-
-                        <div class="iconBx">
-                            <ion-icon name="cart-outline"></ion-icon>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="card">
-                        <div>
-                            <div class="cardName">Comments</div>
-                        </div>
-
-                        <div class="iconBx">
-                            <ion-icon name="chatbubbles-outline"></ion-icon>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="card">
-                        <div>
-                            <div class="cardName">Earning</div>
-                        </div>
-
-                        <div class="iconBx">
-                            <ion-icon name="cash-outline"></ion-icon>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>

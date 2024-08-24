@@ -19,48 +19,54 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         
-        // TaskGroup::create([
-        //     'task_group_name' => 'PRA INISIALISASI'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 1'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 2'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 3'
-        // ]);
-        // TaskGroup::create([
-        //     'task_group_name' => 'INISIALISASI Day 4'
-        // ]);
-        // User::factory(100)->create();
-        FileManager::factory(200)->create();
+        TaskGroup::create([
+            'task_group_name' => 'PRA INISIALISASI',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 1',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 2',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 3',
+            'active' => 1
+        ]);
+        TaskGroup::create([
+            'task_group_name' => 'INISIALISASI Day 4',
+            'active' => 1
+        ]);
+        
+        User::create([
+            'name' => 'Admin_KSK',
+            'email' => 'admin@gmail.com',
+            'isAdmin' => 1,
+            'kelompok' => '-',
+            'password' => bcrypt('12345678'),
+        ]);
 
-        // FileManager::create([
-        //     'SubTask_id' => 1,
-        //     'user_id' => 1,
-        //     'file_name' => 'dwddd.jpg',
-        //     'file_path' => 'dwddd.jpg'
-        // ]);
+        User::create([
+            'name' => 'Admin_inisialisasi2024',
+            'email' => 'inisialisasi2024@gmail.com',
+            'isAdmin' => 1,
+            'kelompok' => '-',
+            'password' => bcrypt('KENZI2024'),
+        ]);
 
-        // sub_task::create([
-        //     'task_group_id' => 1,
-        //     'task_name' => 'Membawa minuman band',
-        //     'task_description' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_due' => Carbon::now(),
-        // ]);
-        // sub_task::create([
-        //     'task_group_id' => 2,
-        //     'task_name' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_description' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_due' => Carbon::now(),
-        // ]);
-        // sub_task::create([
-        //     'task_group_id' => 2,
-        //     'task_name' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_description' => 'Membawa Snack roti ketawa dan minuman band',
-        //     'task_due' => Carbon::now(),
-        // ]);
+        User::create([
+            'name' => 'Test User',
+            'nim' => '123456789',
+            'isAdmin' => 0,
+            'kelompok' => 'Flutter',
+            'password' => bcrypt('qwertyuiop'),
+        ]);
+        
+
+        $this->call(CsvDataSeeder::class);
+        
+        
     }
 }

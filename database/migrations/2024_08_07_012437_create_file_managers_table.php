@@ -23,6 +23,7 @@ return new class extends Migration
                 ->onUpdate('cascade');
             $table->string('file_name');
             $table->string('file_path');
+            $table->string('file_links')->nullable();
             $table->timestamps();
         });
     }

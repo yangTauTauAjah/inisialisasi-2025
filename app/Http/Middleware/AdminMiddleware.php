@@ -16,14 +16,16 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() === false) {
+        if (!Auth::check()) {
             return redirect('login');
         }
-
-        if (Auth::check() || Auth::user()->isAdmin === true) {
+    
+        if (Auth::user()->isAdmin) {
             return $next($request);
         }
+    
+        // Redirect non-admin users to a specific page
+        return redirect('/index'); 
 
-        return redirect('login');
     }
 }

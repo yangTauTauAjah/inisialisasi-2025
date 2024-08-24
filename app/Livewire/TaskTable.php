@@ -37,12 +37,18 @@ class TaskTable extends DataTableComponent
                         ->orderBy('kelompok')
                         ->get()
                         ->unique('kelompok')
-                        ->keyBy('id')
+                        ->keyBy('kelompok') // Use 'kelompok' as the key
                         ->map(fn($tag) => $tag->kelompok)
                         ->toArray()
                 )
-                ->filter(function (Builder $builder, string $value) {
-                    $builder->where($value, true);
+                ->filter(function (Builder $builder, $value) {
+                    if (is_array($value)) {
+                        // If multiple values are selected, use whereIn
+                        $builder->whereIn('kelompok', $value);
+                    } else {
+                        // If a single value is selected, use where
+                        $builder->where('kelompok', $value);
+                    }
                 }),
         ];
     }

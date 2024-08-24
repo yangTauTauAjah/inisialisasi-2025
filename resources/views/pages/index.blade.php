@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="{{ asset('inis/images/logoangkatan.png')}}">
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -21,19 +21,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="home/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="home/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('home/fonts/icomoon/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/fonts/flaticon/font/flaticon.css')}}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="home/css/tiny-slider.css">
-    <link rel="stylesheet" href="home/css/aos.css">
-    <link rel="stylesheet" href="home/css/glightbox.min.css">
-    <link rel="stylesheet" href="home/css/style.css">
+    <link rel="stylesheet" href="{{ asset('home/css/tiny-slider.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/css/aos.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/css/glightbox.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('home/css/style.css')}}">
 
-    <link rel="stylesheet" href="home/css/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ asset('home/css/flatpickr.min.css')}}">
 
-    <link rel="stylesheet" href="inis/css/app.css">
+    <link rel="stylesheet" href="{{ asset('inis/css/app.css')}}">
 
 
     <title>Inisalisasi 2024</title>
@@ -63,13 +63,25 @@
                             <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
                                 <li class="active"><a href="index.html">Home</a></li>
                                 <li><a href="#tatatertib">Tata Tertib</a></li>
-                                <li><a href="/penugasan/index">Penugasan Alim</a></li>
                                 <li><a href="#">Berita & Pengumuman</a></li>
                                 @auth
-                                    <li><a href="/task">Admin</a></li>
+                                    <li><a href="/penugasan/index">Penugasan</a></li>
                                 @endauth
-                                <li><a href="/login">Login</a></li>
-                                <li><a href="/penugasan/temp">temp</a></li>
+                                @auth
+                                    @if (Auth::user()->isAdmin === 1)
+                                        <li><a href="/dashboard">Dashboard Admin</a></li>
+                                    @endif
+                                @endauth
+                                @if (!Auth::check())
+                                    <li><a href="/login">Login</a></li>
+                                @else
+                                    <li>
+                                        <form action="{{ route('logout') }}" method="POST">
+                                            @csrf
+                                            <input type="submit" class="" value="Logout" class="btn btn-sm">
+                                        </form>
+                                    </li>
+                                @endif
                             </ul>
                             <a href="#"
                                 class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
@@ -124,7 +136,7 @@
                 </div>
             </div>
             <div class="row justify-content-center align-items-start">
-                <div class="col-lg-7 mb-4 mb-lg-0">
+                <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -136,7 +148,7 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('inis/images/fotbar.jpg') }}" class="d-block w-100"
+                                <img src="{{ asset('inis/images/fotbar-2.jpg') }}" class="d-block w-100"
                                     alt="foto-inis">
                             </div>
                             <div class="carousel-item">
@@ -160,7 +172,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-lg-4 ps-lg-2">
+                <div class="col-lg-4 ps-lg-2" data-aos="fade-left" data-aos-delay="500">
                     <div class="mb-5">
                         <h2 class="text-black h4"><strong>INISIALISASI</strong></h2>
                         <p>merupakan serangkaian
@@ -258,9 +270,7 @@
                     <h2 class="heading text-primary" data-aos="fade-up" data-aos-delay="0">Peraturan Berpakaian
                         INISIALISASI 2024</h2>
                 </div>
-
             </div>
-
 
             <div class="testimonial-slider-wrap">
                 <div class="testimonial-slider" id="testimonial-slider">
@@ -391,7 +401,7 @@
     <div class="site-footer">
         <div class="container">
             <div class="row">
-                {{-- <div class="col-lg-4">
+                <div class="col-lg-4">
                     <div class="widget">
                         <h3>About</h3>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
@@ -405,17 +415,14 @@
                             <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
                         </ul>
                     </div> <!-- /.widget -->
-                </div> <!-- /.col-lg-4 --> --}}
+                </div> <!-- /.col-lg-4 -->
                 <div class="col-lg-6">
                     <div class="widget">
                         <h3>Company</h3>
                         <ul class="list-unstyled float-start links">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Vision</a></li>
-                            <li><a href="#">Mission</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Tata Tertib</a></li>
+                            <li><a href="#">Login</a></li>
                         </ul>
                         <ul class="list-unstyled float-start links">
                             <li><a href="#">Partners</a></li>
@@ -431,9 +438,9 @@
                     <div class="widget">
                         <h3>Navigation</h3>
                         <ul class="list-unstyled links mb-4">
-                            <li><a href="#">Our Vision</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Tata Tertib</a></li>
+                            <li><a href="#">Penugasan</a></li>
                         </ul>
 
                         <h3>Social</h3>
@@ -466,7 +473,7 @@
                             href="https://themewagon.com">ThemeWagon</a>
                         <!-- License information: https://untree.co/license/ -->
                     </p> --}}
-                        &copy; 2024 INISIALISASI - D4 Teknik Informatika
+                    &copy; 2024 INISIALISASI - D4 Teknik Informatika
                 </div>
             </div>
         </div> <!-- /.container -->

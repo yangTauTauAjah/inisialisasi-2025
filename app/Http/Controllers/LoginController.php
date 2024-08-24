@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,32 +14,39 @@ class LoginController extends Controller
     {
         return view('login');
     }
+    public function Mabaindex()
+    {
+        return view('loginMaba');
+    }
     public function authenticate(Request $request)
     {
-        try {
-            $data = [
-                'email' => $request->input('email'),
-                'password' => $request->input('password'),
-            ];
+        $data = $request->validate([
+            'login' => 'required',
+            'password' => 'nullable|string',
+        ]);
 
+        $login = $request->input('login');
+        $password = $request->input('password');
 
-            if (Auth::Attempt($data)) {
-                return redirect()->intended();
-            } else {
-                Session::flash('error', 'Email atau Password Salah');
-                return redirect('/login');
-            }
-        } catch (AuthenticationException $e) {
-
-            Session::flash('error', 'Login GAGAL.');
-            return redirect('/');
-
-        } catch (\Exception $e) {
-
-            Session::flash('error', 'Terjadi kesalahan pada sistem. Silakan coba lagi nanti.');
-            return redirect('/login');
+        // Determine if the login is an email or NIM
+        if (filter_var($login, FILTER_VALIDATE_EMAIL)) {
+            $credentials = ['email' => $login, 'password' => $password];
+        } else {
+            $credentials = ['nim' => $login, 'password' => $password];
         }
+
+        if (Auth::attempt($credentials)) {
+
+            if (Auth::user()->isAdmin == 1) {
+                return redirect()->intended('dashboard');
+            } 
+
+            return redirect('index');
+        }
+
+        return redirect()->back()->with('error', 'NIM or Email is incorrect.');
     }
+    
     public function logout(Request $request)
     {
         Auth::logout();
@@ -46,6 +54,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/index');
     }
 }

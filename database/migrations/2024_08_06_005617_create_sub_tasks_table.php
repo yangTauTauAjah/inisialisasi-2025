@@ -18,10 +18,10 @@ return new class extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->string('task_name');
-            $table->string('task_description');
+            $table->longText('task_description');
             $table->dateTime('task_due');
-            $table->dateTime('task_done')->nullable();
-            $table->string('task_file')->nullable();
+            $table->boolean('active');
+            $table->string('isLinks')->nullable();
             $table->timestamps();
         });
     }
