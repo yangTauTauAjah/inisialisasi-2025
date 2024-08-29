@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>{{ $subTask->task_name }}</title>
-    @include('pages.penugasan.layout.css')
+    @include('pages.penugasan.layout.css2')
 </head>
 
 <body>
