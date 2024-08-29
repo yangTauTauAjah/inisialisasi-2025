@@ -1,13 +1,13 @@
 <style>
     * {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Work Sans", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
 
     :root {
-    --blue: #2a2185;
+    --blue: #306EE8;
     --white: #fff;
     --gray: #f5f5f5;
     --black1: #222;
@@ -21,7 +21,7 @@
 
     .header {
         font-family: Arial, sans-serif;
-        color: #6c63ff;
+        color: #fff;
         padding: 20px;
         position: relative;
         margin-bottom: 20px;
@@ -154,6 +154,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    background-color: #306EE8
     }
 
     .toggle {
@@ -165,6 +166,7 @@
     align-items: center;
     font-size: 2.5rem;
     cursor: pointer;
+    color: var(--white)
     }
 
     .search {
@@ -219,7 +221,7 @@
     position: relative;
     width: 100%;
     padding: 20px;
-    display: grid;
+    display: block;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     }
@@ -232,7 +234,8 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.08);
+
     }
 
     .cardBox .card .numbers {
@@ -474,6 +477,13 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+.logo-img {
+    max-width: 60px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
 }
 
 </style>

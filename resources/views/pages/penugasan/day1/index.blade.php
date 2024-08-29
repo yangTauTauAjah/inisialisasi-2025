@@ -13,9 +13,6 @@
                 <div>
                     <div class="cardName">Catatan</div>
                 </div>
-                <div class="iconBx">
-                    <ion-icon name="pencil-outline"></ion-icon>
-                </div>
             </div>
         </a>
 
@@ -24,9 +21,6 @@
                 <div>
                     <div class="cardName">Beyond Boundaries</div>
                 </div>
-                <div class="iconBx">
-                    <ion-icon name="film-outline"></ion-icon>
-                </div>
             </div>
         </a>
 
@@ -34,9 +28,6 @@
             <div class="card">
                 <div>
                     <div class="cardName">Database Kating</div>
-                </div>
-                <div class="iconBx">
-                    <ion-icon name="person-circle-outline"></ion-icon>
                 </div>
             </div>
         </a>

@@ -353,7 +353,7 @@
         </div>
     </div>
 
-    <div class="section sec-cta overlay" style="background-image: url('inis/images/fotbar.jpg')">
+    <div class="section sec-cta overlay" style="background-image: url('inis/images/fotbar-2.jpg')">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="0">
