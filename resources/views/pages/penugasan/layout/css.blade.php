@@ -221,7 +221,7 @@
     position: relative;
     width: 100%;
     padding: 20px;
-    display: block;
+    display: inline-block;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     }
@@ -485,5 +485,12 @@
     width: auto;
     height: auto;
 }
+
+.highlight {
+        color: #e74c3c;
+        font-weight: bold;
+        font-size: 0.8rem;
+         margin-top: 5px;
+    }
 
 </style>
