@@ -401,15 +401,10 @@
     <div class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 ">
-                        <h3>Social</h3>
+                <div class="col-lg-6">
+                        <h4>Instagram Inisialisasi</h4>
                         <ul class="list-unstyled social">
-                            <li><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                            <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                            <li><a href="#"><span class="icon-dribbble"></span></a></li>
+                            <li><a href="https://www.instagram.com/inisialisasi2024/" target="_blank"><span class="icon-instagram"></span></a></li>
                         </ul>
                     </div> <!-- /.widget -->
                 </div> <!-- /.col-lg-4 -->
@@ -417,21 +412,6 @@
 
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <!--
-              **==========
-              NOTE:
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/
-              **==========
-            -->
-
-                    {{-- <p>Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>. All Rights Reserved. &mdash; Designed with love by <a
-                            href="https://untree.co">Untree.co</a> Distributed By <a
-                            href="https://themewagon.com">ThemeWagon</a>
-                        <!-- License information: https://untree.co/license/ -->
-                    </p> --}}
                     &copy; 2024 INISIALISASI - D4 Teknik Informatika
                 </div>
             </div>
