@@ -3,7 +3,7 @@
     <div class="details">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h3>Pengumuman: Membawa Snack coklat jerawat dan minuman band (coklat jerawat dan teh kotak)</h3>
+                <h3>Pengumuman: Membawa Snack coklat jerawat dan minuman band</h3>
             </div>
         </div>
     </div>
@@ -13,6 +13,9 @@
                 <div>
                     <div class="cardName">ID Card</div>
                 </div>
+                <div class="iconBx">
+                    <ion-icon name="id-card-outline"></ion-icon>
+                </div>
             </div>
         </a>
 
@@ -20,6 +23,9 @@
             <div class="card">
                 <div>
                     <div class="cardName">Nama & Logo Angkatan</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="people-outline"></ion-icon>
                 </div>
             </div>
         </a>
@@ -29,6 +35,9 @@
                 <div>
                     <div class="cardName">Booklet</div>
                 </div>
+                <div class="iconBx">
+                    <ion-icon name="book-outline"></ion-icon>
+                </div>
             </div>
         </a>
 
@@ -36,6 +45,9 @@
             <div class="card">
                 <div>
                     <div class="cardName">Database Angkatan</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="person-circle-outline"></ion-icon>
                 </div>
             </div>
         </a>

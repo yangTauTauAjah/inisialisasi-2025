@@ -108,12 +108,6 @@ Route::get('/task', function () {
     return view('pages.penugasan.task');
 });
 
-
-Route::get('/penugasan/d1t1', function () {
-    return view('pages.penugasan.day1.tugas1');
-});
-
-
 Route::get('/', function () {
     return view('pages.landing');
 });
@@ -149,12 +143,12 @@ Route::middleware(MabaMiddleware::class)->group(function () {
 
 // admin & maba bisa akses
 Route::group([], function () {
-    
+
     // penugasan
     Route::get('/penugasan/index', [UserController::class, 'index']);
     Route::get('/penugasan/{task_group_name}/{id}', [UserController::class, 'show'])->name('task_group.detail');
     Route::get('/penugasan/task_detail/{task_name}/{id}', [UserController::class, 'task_detail'])->name('task.detail');
-    
+
     // Upload file
     Route::post('/upload-file/{id}', [FileUploadController::class, 'fileUpload'])->name('file.upload');
     Route::post('/upload-links/{id}', [FileUploadController::class, 'store'])->name('upload.link');

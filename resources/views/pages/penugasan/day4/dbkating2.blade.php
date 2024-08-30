@@ -159,7 +159,9 @@
                 </ul>
             </div>
             <h2>Format Penulisan</h2>
-            <img src="/inis/images/penugasan/dbkating.jpg" alt="">
+            <div class="image-wrapper">
+                <img src="/inis/images/penugasan/dbkating.jpg" alt="" class="img-fluid">
+            </div>
             <h2>Pengumpulan Tugas</h2>
             <p>Pengumpulan dalam bentuk PDF berisi scan halaman booklet dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_DBKating2.pdf</span></p>
             <p>Tugas paling lambat dikumpulkan pada <span class="highlight">22 November 2024 pukul 19.00 WIB</span></p>

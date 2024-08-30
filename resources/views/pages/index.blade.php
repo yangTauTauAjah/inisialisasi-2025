@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="img-wrap">
-                        <img src="inis/images/logo.png" alt="Image" class="img-fluid rounded">
+                        <img src="inis/images/logokertas.png" alt="Image" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
@@ -353,7 +353,7 @@
         </div>
     </div>
 
-    <div class="section sec-cta overlay" style="background-image: url('inis/images/fotbar.jpg')">
+    <div class="section sec-cta overlay" style="background-image: url('inis/images/fotbar-2.jpg')">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="0">

@@ -3,7 +3,7 @@
     <div class="details">
         <div class="recentOrders">
             <div class="cardHeader">
-                <h2>Pengumuman: Membawa Snack bantal coklat dan minuman bisa tambeh (pillow dan isoplus)</h2>
+                <h3>Pengumuman: Membawa Snack bantal coklat dan minuman bisa tambah</h3>
             </div>
         </div>
     </div>

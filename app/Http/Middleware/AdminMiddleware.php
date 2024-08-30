@@ -19,13 +19,13 @@ class AdminMiddleware
         if (!Auth::check()) {
             return redirect('login');
         }
-    
+
         if (Auth::user()->isAdmin) {
             return $next($request);
         }
-    
+
         // Redirect non-admin users to a specific page
-        return redirect('/index'); 
+        return redirect('/index');
 
     }
 }

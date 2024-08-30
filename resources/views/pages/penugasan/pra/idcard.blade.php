@@ -177,7 +177,10 @@
                 <li>Nama kelompok</li>
             </ul>
             <h2>Contoh ID Card</h2>
-            <img src="/inis/images/penugasan/idcard.jpg" alt="">
+            <div class="image-wrapper">
+                <img src="/inis/images/penugasan/idcard.jpg" alt="" class="img-fluid">
+            </div>
+
             <h2>Pengumpulan Tugas</h2>
             <p>Pengumpulan dalam bentuk PDF yang berisi foto diri menggunakan ID Card dengan format nama: <span class="highlight">NAMAKELOMPOK_3digitNIMterakhir_Nama_IDCARD.pdf</span></p>
             <p>Tugas paling lambat dikumpulkan pada <span class="highlight">14 September  2024 pukul 19.00 WIB</span></p>
