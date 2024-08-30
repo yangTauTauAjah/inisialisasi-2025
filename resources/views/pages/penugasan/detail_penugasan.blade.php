@@ -59,7 +59,9 @@
                     <a href="{{ route('task.detail', ['task_name' => $subTask->task_name, 'id' => $subTask->id]) }}">
                         <div class="card">
                             <div>
-                                <div class="cardName">{{ $subTask->task_name }}</div>
+                                <div class="cardName">{{ $subTask->task_name }}
+                                    <p><span class="highlight">{{ \Carbon\Carbon::parse($subTask->task_due)->format('l, d F Y, h:i A') }}</span></p>
+                                </div>
                             </div>
                         </div>
                     </a>

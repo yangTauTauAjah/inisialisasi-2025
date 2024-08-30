@@ -15,13 +15,13 @@ class FileUploadController extends Controller
 {
     public function fileUpload(Request $request, $id)
     {
-        $subTask = SubTask::find($id); 
+        $subTask = SubTask::find($id);
 
         if (\Carbon\Carbon::now() >= \Carbon\Carbon::parse($subTask->task_due)) {
             return redirect()->back()->with('error', 'The deadline for this task has passed.');
         }
 
-        // initialised 
+        // initialised
         $receiver = new FileReceiver('file', $request, HandlerFactory::classFromRequest($request));
 
         // if not uploaded
