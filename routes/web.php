@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FileManagerController;
-use App\Http\Middleware\MabaMiddleware;
+use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\LoginController;
@@ -13,17 +13,6 @@ use App\Http\Controllers\TaskGroupController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
 
-
-// temp
-Route::get('/penugasan/pra', function () {
-    return view('pages.penugasan.pra.index
-    ');
-});
-
-Route::get('/task', function () {
-    return view('pages.penugasan.task');
-});
-
 Route::get('/', function () {
     return view('pages.landing');
 });
@@ -33,7 +22,7 @@ Route::get('/index', function () {
 });
 
 // admin aja yang bisa akses
-Route::middleware(AdminMiddleware::class)->group(function () {
+Route::middleware(AdminMiddleware::class)->prefix("admin")->group(function () {
     // dashboard
     Route::get('/dashboard', [AdminController::class, 'index']);
 
@@ -41,45 +30,26 @@ Route::middleware(AdminMiddleware::class)->group(function () {
     Route::get('/task-manager', [SubTaskController::class, 'list_tugas']);
     Route::resource('task', SubTaskController::class);
     Route::resource('task-group', TaskGroupController::class);
-
+    Route::resource('berita-dan-pengumuman', NewsController::class);
 });
 
 // maba aja yang bisa akses
-Route::middleware(MabaMiddleware::class)->group(function () {
+Route::middleware(AuthMiddleware::class)->group(function () {
     // User Controller
-    Route::get('/penugasan/index', [UserController::class, 'index']);
-    Route::get('/penugasan/{task_group_name}/{id}', [UserController::class, 'show'])->name('task_group.detail');
-    Route::get('/penugasan/task_detail/{task_name}/{id}', [UserController::class, 'task_detail'])->name('task.detail');
+    Route::get('/tugas', [UserController::class, 'index']);
+    Route::get('/tugas/{group}', [UserController::class, 'show'])->name('task_group.detail');
+    Route::get('/tugas-detail/{id}', [UserController::class, 'task_detail'])->name('task.detail');
 
     // Upload file
     Route::post('/upload-file/{id}', [FileUploadController::class, 'fileUpload'])->name('file.upload');
     Route::post('/upload-links/{id}', [FileUploadController::class, 'store'])->name('upload.link');
 });
-
-
-// admin & maba bisa akses
-Route::group([], function () {
-
-    // penugasan
-    Route::get('/penugasan/index', [UserController::class, 'index']);
-    Route::get('/penugasan/{task_group_name}/{id}', [UserController::class, 'show'])->name('task_group.detail');
-    Route::get('/penugasan/task_detail/{task_name}/{id}', [UserController::class, 'task_detail'])->name('task.detail');
-
-    // Upload file
-    Route::post('/upload-file/{id}', [FileUploadController::class, 'fileUpload'])->name('file.upload');
-    Route::post('/upload-links/{id}', [FileUploadController::class, 'store'])->name('upload.link');
-});
-
-
-// News Controller
-Route::resource('/admin/berita-dan-pengumuman', NewsController::class);
 
 // login
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/login-maba', [LoginController::class, 'Mabaindex']);
 Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
 Route::post('/set-password', [MabaController::class, 'setPassword'])->name('setPassword');
 
 
