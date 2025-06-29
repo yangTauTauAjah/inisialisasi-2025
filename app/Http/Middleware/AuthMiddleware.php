@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class MabaMiddleware
+class AuthMiddleware
 {
     /**
      * Handle an incoming request.
@@ -18,11 +18,11 @@ class MabaMiddleware
     {
         if (!Auth::check()) {
             return redirect('login');
-        }
-    
-        if (!Auth::user()->isAdmin) {
+        } 
+        
+        /* if (!Auth::user()->isAdmin) {
             return $next($request);
-        }
+        } */
     
         // Redirect non-admin users to a specific page
         return redirect('/index'); 
