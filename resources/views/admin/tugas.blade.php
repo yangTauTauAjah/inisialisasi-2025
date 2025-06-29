@@ -2,6 +2,28 @@
 @section('page-heading', 'Penugasan | Dashboard Tugas')
 @section('content')
 
+    <script>
+        // Store Laravel route URLs in JavaScript variables for easy access
+        const csrfToken = "{{ csrf_token() }}"; // Get CSRF token for POST/PUT/DELETE requests
+
+        function removeTaskGroup(id) {
+            fetch(`/admin/task-group/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken // Include CSRF token for Laravel's protection
+                }
+            }).then(res => {
+                if (res.ok) {
+                    alert('Tugas berhasil dihapus');
+                    window.location.reload();
+                } else {
+                    res.json().then(e => console.log(e))
+                    throw new Error('Network response was not ok');
+                }
+            })
+        }
+
+    </script>
     <div class="row">
         <div class="col">
             @if (session('success'))
@@ -36,7 +58,7 @@
                                 </h2>
                                 <div id="panelsStayOpen-{{ $loop->iteration }}" class="accordion-collapse collapse">
                                     <div class="accordion-body">
-                                        <ol>
+                                        <ol id="list-tugas">
                                             @if ($taskGroup->subTasks->isEmpty())
                                                 <p style="color: gray">Belum Ada Tugas</p>
                                             @endif
@@ -73,15 +95,65 @@
                 </div>
                 <div class="card-body">
                     <table class="table">
-                        <tbody>
+                        <tbody id="table-tugas">
                             @foreach ($taskGroups as $item)
                                 <tr>
                                     <td>{{ $item->task_group_name }}</td>
                                     <td class="text-end">
-                                        <a href="" class="btn btn-sm btn-warning"><i
-                                                class="fa-solid fa-pen-to-square"></i></a>
-                                        <a href="" class="btn btn-sm btn-danger"><i
-                                                class="fa-solid fa-trash-can"></i></a>
+                                        <a class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#TugasEdit">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                        <a onclick="removeTaskGroup({{ $item->id }})" class="btn btn-sm btn-danger">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{-- <div class="modal fade" id="TugasEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                                <div class="modal-content">
+                                                    <form action="{{ route('task-group.update', [$item->id]) }}" method="POST">
+                                                        @method('PUT')
+                                                        @csrf
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Tugas</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label for="">Nama Tugas</label>
+                                                                <input type="text" class="form-control" name="task_group_name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <input type="submit" class="btn btn-primary" value="Save changes">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div> --}}
+                                        <div class="modal fade" id="TugasEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                                <div class="modal-content">
+                                                    <form action="{{ route('task-group.update', [$item->id]) }}" method="POST">
+                                                        @method('PUT')
+                                                        @csrf
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Tugas</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group mb-3">
+                                                                <label for="">Nama Tugas</label>
+                                                                <input type="text" class="form-control" value="{{ $item->task_group_name }}" name="task_group_name" placeholder="Tugas day 1">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <input type="submit" class="btn btn-success" value="Submit">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach
@@ -174,6 +246,28 @@
             </div>
         </div>
     </div>
+    {{-- <div class="modal fade" id="TugasEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Tugas</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="editTask()" method="POST">
+                        @csrf
+                        <div class="form-group mb-3">
+                            <label for="">Nama Tugas</label>
+                            <input type="text" class="form-control" name="task_group_name" placeholder="Tugas day 1">
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-success" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> --}}
 
 @section('page-css')
     <link rel="stylesheet" href="{{ asset('assets/summernote/summernote-lite.min.css') }}">
