@@ -90,8 +90,14 @@ class SubTaskController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $sub_task)
+    public function destroy($id)
     {
-        //
+        $subTask = SubTask::find($id);
+        if ($subTask) {
+            $subTask->delete();
+            return response()->json(['success' => 'Tugas Berhasil Dihapus'], 200);
+        } else {
+            return response()->json(['error' => 'Tugas Tidak Ditemukan'], 404);
+        }
     }
 }
